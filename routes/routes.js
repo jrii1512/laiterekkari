@@ -12,12 +12,10 @@ router.get('/startremoval/:equipmentid', item.removeRec);
 router.get('/', item.getEquipments);
 
 router.get('/newRecord', item.gotoNewRecord);
-//router.get('/equipments', item.getEquipments);
 router.get('/other', item.getOther);
 router.get('/products', item.getProducts);
 router.get('/createEq', item.createEq);
 router.get('/editEq/:equipmentid', item.editEq);
-//router.post('/update/:equipmentid/:equipmentDesc/:category/:categoryDesc/:number/:oldDesc/:status/:manufacture/:model/:serialnro/:location/:useby', item.updaterec);
 router.post('/update/:equipmentid/:equipmentDesc/:category/:categoryDesc/:number/:oldid/:status/:manufacture/:model/:serialnro/:location/:useby', item.updaterec);
 /*
 router.get('/calibrations', item.getCalibrations);

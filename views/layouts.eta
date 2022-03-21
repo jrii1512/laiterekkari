@@ -302,11 +302,13 @@ div#kuvat{
 
 <ul>
 <div class = "box">
-<div class="tab">
+<div class="tab">    
+  <button><a href = "/">Pääsivu</a></button>
+  <button><a href = "/createEq">Uusi laite</a></button>
   <button class="tablinks" onclick="switchTab(event, 'laite')" id = "def">Laitteet</button>
   <button class="tablinks" onclick="switchTab(event, 'alert')">Hälytykset</button>
 
-  <button><a href = "/newRecord">New Record</a></button>
+
 </div>
     <%~ it.body %>
 
