@@ -1,0 +1,38 @@
+<% layout("./layouts.eta") %>
+
+<span><%it%></span>
+
+<div id="laite" class="tabcontent">
+    <form action = "/equipments" method = "get" name ="startForm" class="formi">
+        <input type = "submit" value = "Hae laitetaulun sisältö" id="equipments">
+    </form>
+  
+  <form action = "/other" method = "get" name ="startForm" class="formi">
+    <input type = "submit" value = "Hae other taulun sisältö" id = "others">
+  </form>
+  
+  <form action = "/products" method = "get" name ="startForm">
+    <input type = "submit" value = "Hae product taulun sisältö" id = "product">
+  </form>
+
+  <form action = "/calibrations" method = "get" name ="startForm">
+    <input type = "submit" value = "Hae calibrations taulun sisältö" id = "calibration">
+  </form>
+</div>
+
+<h3>Ei toteutettu</h3> 
+<div id="alert" class="tabcontent">
+  
+  <h3>Ei toteutettu</h3> 
+
+  <table>
+    <tr><th>Other Alert</th></tr>
+    <tr>
+      <td></td>
+    </tr>
+  </table>
+</div>
+
+<script>
+const event = new Date();
+document.getElementById('huoltoPVM').valueAsDate = event;</script>

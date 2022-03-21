@@ -1,0 +1,26 @@
+<% layout("./layouts.eta") %>
+
+<form action = "/" method = "get">
+    <input type = "submit" value = "takaisin" id="back">
+</form>
+
+<h3>Vivago Laiterekisteri</h3>
+<table>
+        <tr>
+            <th>Equipment Id</th><th>Purchase Date</th><th>Purchase By</th><th>Supplier</th><th>ID Supplier</th><th>Gxp Assesment Results</th>
+            <th>Validation need</th><th>Validated (date)</th><th>Validation Report</th>
+            <th>Specification</th><th>Notes</th><th>Maintenance need</th><th>Maintenance Instructions</th>
+        </tr>
+
+<% it.other.forEach((h) =>{%>
+
+    <tr>
+        <td><%= h[13] %></td> <td><%= h[1] %></td> <td><%= h[2] %></td><td><%= h[3] %></td><td><%= h[4] %></td> <td><%= h[5] %>
+        </td> <td><%= h[6] %></td> <td><%= h[7] %></td> <td><%= h[8] %></td> <td><%= h[9] %></td>
+        <td><%= h[10] %></td> <td><%= h[11] %></td> <td><%= h[12] %></td>
+    </tr>
+<%}); %>
+
+</table>
+</div>
+

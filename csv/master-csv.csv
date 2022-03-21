@@ -1,0 +1,242 @@
+﻿OldID;Prefix;Category;Number;EquipmentID;Status;EquipmentDesc;Manufacture;Model;Serialnro;CategoryDesc;Use;Location;idsupplier;calibrationapplied;calibrationduedate;lastcalibrationdate;calibrationinterval;calibrationcert;maintenanceneed;Maintentance instruction;swvalidationneed;Last Validation;validationreport;purchasedate;purchaseby;specification;notes;MOVE;CARE;FIDO;VIVA Point;VIVA Point GSM;Devcie Interface;Add-On;Part of Set-up;Software;Generic
+10.01.200907;VE;02;0001;VE-02-0001;Unknown;Digital Multi Meter;Fluke;187;77950080;02. Measuring equipment, Electronics;Unknown;Unknown;Unknown;YES;2009-07-31;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+10.02.200907;VE;02;0002;VE-02-0002;Unknown;Digital Multi Meter;Fluke;187;79340115;02. Measuring equipment, Electronics;Unknown;Unknown;Unknown;YES;2009-03-31;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+10.03.200907;VE;02;0003;VE-02-0003;Unknown;Digital Multi Meter;Fluke;77III;76850534;02. Measuring equipment, Electronics;Unknown;Unknown;Unknown;YES;2009-03-31;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+10.04.-;VE;02;0004;VE-02-0004;Unknown;Digital Multi Meter;Circuitmate;LM22A;71130453;02. Measuring equipment, Electronics;Unknown;Unknown;Unknown;Unknown;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+10.05.200908;VE;02;0005;VE-02-0005;Unknown;Digital Multi Meter;Fluke;189;93950122;02. Measuring equipment, Electronics;Unknown;Unknown;Unknown;YES;2009-08-31;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;2007/09;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+10.06.200908;VE;02;0006;VE-02-0006;Unknown;Digital Multi Meter;Fluke;179;94370271;02. Measuring equipment, Electronics;Unknown;Unknown;Unknown;YES;2009-08-31;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;2007/09;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+10.07.200908;VE;02;0007;VE-02-0007;Unknown;Digital Multi Meter;Fluke;179;95920329;02. Measuring equipment, Electronics;Unknown;Unknown;Unknown;YES;2009-08-31;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;2008/01;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+20.01.200907;VE;02;0008;VE-02-0008;Unknown;Oscilloscope, portable;;124 - NO DM8840203;944401124101;02. Measuring equipment, Electronics;Unknown;Unknown;Unknown;YES;2009-07-31;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+20.02.-;VE;02;0009;VE-02-0009;Unknown;Oscilloscope;LeCroy;LP142;01659;02. Measuring equipment, Electronics;Unknown;Unknown;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+20.03.-;VE;02;0010;VE-02-0010;Unknown;Oscilloscope;Tektronix;TDS210;B091765;02. Measuring equipment, Electronics;Unknown;Unknown;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+30.01.-;VE;01;0011;VE-01-0011;Unknown;Scale;Mettler Toledo;PB303-SDR;1121020322;01. Measuring equipment, Mechanics;Unknown;Unknown;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+30.02.-;VE;01;0012;VE-01-0012;Unknown;Scale;Accurat ;2000;59580390406;01. Measuring equipment, Mechanics;Unknown;Unknown;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+40.01.-;VE;01;0013;VE-01-0013;Unknown;Caliber;Mitutoyo;"Code No. 500-162U
+Model No. CD-20DC";053089;01. Measuring equipment, Mechanics;Unknown;Unknown;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+40.02.-;VE;01;0014;VE-01-0014;Unknown;Caliber;Samson;- ;- ;01. Measuring equipment, Mechanics;Unknown;Unknown;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+50.01.-;VE;02;0015;VE-02-0015;Unknown;RF Analyzer;Protek;2GHz RF field analyzer 3200;320001927;02. Measuring equipment, Electronics;Unknown;Unknown;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+60.01.-;VE;04;0016;VE-04-0016;Unknown;Power Supply;Tecstar;TAC30-3;3080139;04. Test equipment, Electronics;Unknown;Unknown;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+60.02.-;VE;04;0017;VE-04-0017;Unknown;Power Supply;Tecstar;TAC30-3;3080166;04. Test equipment, Electronics;Unknown;Unknown;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+60.03.-;VE;04;0018;VE-04-0018;Unknown;Power Supply;Tecstar;TAC30-3;3080165;04. Test equipment, Electronics;Unknown;Unknown;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+60.04.-;VE;04;0019;VE-04-0019;Unknown;Power Supply;Kenwood;PAC30-2;3040018;04. Test equipment, Electronics;Unknown;Unknown;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+60.05.-;VE;04;0020;VE-04-0020;Unknown;Power Supply;Protek;3003B;H002305;04. Test equipment, Electronics;Unknown;Unknown;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+60.06.-;VE;04;0021;VE-04-0021;Unknown;Power Supply;Mascot;- ;- ;04. Test equipment, Electronics;Unknown;Unknown;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+70.01.-;VE;04;0022;VE-04-0022;Unknown;Function Generator;LG Precision Co.;FG-7002C;8111696;04. Test equipment, Electronics;Unknown;Unknown;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+80.01.-;VE;02;0023;VE-02-0023;Unknown;Spectrum Analyzer;Hewlet Packard (HP);Unknown;Unknown;02. Measuring equipment, Electronics;Unknown;Unknown;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;03;0024;VE-03-0024;Unknown;Leak Checker;Greiner Vibrograf AG;Leak Checker 2000;xxx;03. Test equipment, Mechanics;Production;PLASTONE;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;x;x;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;03;0025;VE-03-0025;Unknown;Leak Checker;Greiner Vibrograf AG;Leak Checker Prime;xxx;03. Test equipment, Mechanics;Other;MLB;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;03;0026;VE-03-0026;Unknown;Leak Checker;Greiner Vibrograf AG;Leak Checker Prime;660918624;03. Test equipment, Mechanics;Production;PLASTONE;Unknown;YES;2023-08-01;2021-08-01;2;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;2019/04;Eelis Cederström;Unknown;"intially purchased for NOTE, moved to PLASTONE Apr-2021. Device was in service and returned in Aug-2021
+Calibration interval agreed to 24 months with Plastone in Feb-2020. The Equiment manufacturer does not have recommendation for the calibrations interval";x;x;x;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;04;0027;VE-04-0027;Active;Interface Card;National Instruments;NI PCIe-6351;01DEE121;04. Test equipment, Electronics;Production;VE-05-0028;Unknown;YES;2021-02-20;2019-02-20;2;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;2019/03;Eelis Cederström;Unknown;Unknown;x;x;x;Unknown;Unknown;Unknown;Unknown;CARE&MOVE PCBA Tester #1;Unknown;Unknown
+Unknown;VE;05;0028;VE-05-0028;Unknown;Production Tester, MOVE & CARE #1;Vivago/Lenovo;Lenovo ThinkStation P330;S4JE4072;05. Production tester;production;MLB;Unknown;YES;2021-02-20;2019-02-20;2;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;2019/03;Kari Läikkö;Unknown;"Includes IO card VE-04-0027, which defines the calibration date
+TV ID: 1261775036TV SS: B5K#hi#90tDy";x;x;x;Unknown;Unknown;Unknown;Unknown;CARE&MOVE PCBA Tester #1;Unknown;Unknown
+Unknown;VE;10;0029;VE-10-0029;Unknown;Laser printer;Datalogic;Ulyxe 6W@1064 F160S-M39;xxx;10. Laser Printer;Production;MLB;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;x;x;Unknown;Unknown;Unknown;Unknown;Unknown;Laser Printer - OLD;Unknown;Unknown
+Unknown;VE;10;0030;VE-10-0030;Unknown;Laser printer;Datalogic;Ulyxe 6W@1064 F160S-M39;xxx;10. Laser Printer;Production;MLB;VGO2011;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;2019/09;Niina Vilkas;Supplier Klinger;Initially purchased for NOTE, Moved to MLB Nov-2020;x;x;x;Unknown;Unknown;Unknown;Unknown;Laser Printer - New;Unknown;Unknown
+Unknown;VE;02;0031;VE-02-0031;Active;RF Tester;Agilent;E4406A;US41513584;02. Measuring equipment, Electronics;Production;MLB;Unknown;YES;2020-03-26;2019-03-26;1;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Eelis Cedersrtöm;Unknown;"Used as part of Move & CARE production tester #1.
+Ulizes 10MHz clock output and RF input";x;x;Unknown;Unknown;Unknown;Unknown;Unknown;CARE&MOVE PCBA Tester #1;Unknown;Unknown
+Unknown;VE;07;0032;VE-07-0032;Unknown;Flash programming adapter;Elprotronic Inc;FlashPro430, USB-FPA 6.1;20130765;07. Electronics programmer;Production;MLB;Unknown;NO;NA;NA;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Eelis Cedersrtöm;Unknown;Used as part of CARE&Move production tester #1.;x;x;x;Unknown;Unknown;Unknown;Unknown;CARE&MOVE PCBA Tester #1;Unknown;Unknown
+Unknown;VE;07;0033;VE-07-0033;Unknown;Flash programming adapter;Elprotronic Inc;FlashPro-ARM, XS-ISO-1.1;20190335;07. Electronics programmer;Production;MLB;Unknown;NO;NA;NA;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Eelis Cedersrtöm;Unknown;Used as part of CARE&Move production tester #1.;x;x;x;Unknown;Unknown;Unknown;Unknown;CARE&MOVE PCBA Tester #1;Unknown;Unknown
+Unknown;VE;09;0034;VE-09-0034;Unknown;Bar code reader, USB, handheld;Symbol Technologies Inc.;DS4308;15160010501541;09. Bar code reader;R&D;Vivago;Unknown;NO;NA;NA;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Current manufacturer Zebra;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;08;0035;VE-08-0035;Active;MOVE PCBA Test Jig #1;Vivago;MOVE Production tester;NA;08.  Test fixture;Production;MLB;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;x;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;CARE&MOVE PCBA Tester #1;Unknown;Unknown
+Unknown;VE;08;0036;VE-08-0036;Active;MOVE PCBA Test Jig #2;Vivago;MOVE Production tester;NA;08.  Test fixture;Production;MLB;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;CARE&MOVE  PCBA Tester #2;x;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;CARE&MOVE PCBA Tester #2;Unknown;Unknown
+Unknown;VE;09;0037;VE-09-0037;Unknown;Bar code reader, USB, handheld;Symbol Technologies Inc.;DS4308;18337010512144;09. Bar code reader;Production;Unknown;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;2019/04;Kari Läikkö;Unknown;Unknown;x;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;09;0038;VE-09-0038;Unknown;Bar code reader, USB, handheld;Symbol Technologies Inc.;DS4308;18337010512996;09. Bar code reader;Production;MLB;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;2019/04;Kari Läikkö;Unknown;CARE&MOVE  PCBA Tester #1;x;x;x;Unknown;Unknown;Unknown;Unknown;CARE&MOVE PCBA Tester #1;Unknown;Unknown
+Unknown;VE;99;0039;VE-99-0039;Unknown;AC Adapter;Cool Power Solutions;"Part number: CPS-12016EU/3630+
+Model:ATS+18T-W120E";NA;99. Miscaleneous;Production;MLB;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;CARE&MOVE PCBA Test Jig power supply - used for tester #1;x;x;x;Unknown;Unknown;Unknown;Unknown;CARE&MOVE PCBA Tester #1;Unknown;Unknown
+Unknown;VE;05;0040;VE-05-0040;Unknown;MOVE OQC Tester;Vivago;Raspberry Pi;Unknown;05. Production tester;Production;NOTE;NNO VE-05-0040;YES;28.08.2019;28.05.2019;0,25;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;MOVE_OQC_Tester_Description_and_Set-Up_instruction;Unknown;x;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;MOVE OQC tester;Unknown;Unknown
+Unknown;VE;04;0041;VE-04-0041;Unknown;I/O test card for ETH Base stations;Vivago;I/O Test card V01;NA;04. Test equipment, Electronics;R&D;Vivago;Unknown;Unknown;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;2019/08;Eelis Cederström;Unknown;Initially developped for production, but not feasible in practice;Unknown;Unknown;Unknown;x;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;04;0042;VE-04-0042;Unknown;I/O test card for GSM Base stations;Vivago;I/O Test card V02;NA;04. Test equipment, Electronics;R&D;Vivago;Unknown;Unknown;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;2019/08;Eelis Cederström;Unknown;Initially developped for production, but not feasible in practice;Unknown;Unknown;Unknown;Unknown;x;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;04;0043;VE-04-0043;Unknown;I/O test card for base stations;Vivago;I/O Test card. Proto 1;NA;04. Test equipment, Electronics;R&D;Vivago;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;2019/08;Eelis Cederström;Unknown;Proto based on V01 PCB;Unknown;Unknown;Unknown;Unknown;x;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;04;0044;VE-04-0044;Unknown;OUTput test card for GSM base stations;Vivago;OUTput test card (GSM);NA;04. Test equipment, Electronics;Unknown;Vivago;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;2019/08;Eelis Cederström;Unknown;Part of  I/O Test card V02 (only led section);Unknown;Unknown;Unknown;Unknown;x;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;11;0045;VE-11-0045;Unknown;Laser printer control PC;Lenovo;Lenovo V530S;YL003V5M;11. Control PC;Production;MLB;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;2019/05;Kari Läikkö;Unknown;"Used for laser printer @MLB
+TeamViewer:
+VE-11-0045
+1 375 505 625
+Viv4g0-4500-11-VE";x;x;x;Unknown;Unknown;Unknown;Unknown;Laser Printer - New;Unknown;Unknown
+Unknown;VE;11;0046;VE-11-0046;Unknown;Test laptop for DI and Add-on (Väylätesteri);Lenovo;Lenovo IDEAPAD S145, Win 10 Home edition;PF1L3VHT;11. Control PC;Production;MLB;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;12.12.2019;Kari Läikkö;"Ideapad S145-15 Win 10 S ominaisuudet:
+Malli: Ideapad S145-15IWL
+Väri: Onyx Black, musta
+Näyttö: 15,6"" FHD (1920 x 1080) 16:9 TN, matalaheijasteinen
+Suoritin: Intel Pentium Gold 5405U (2,3 GHz, 2ydintä, 2 Mt, 15 W, Multi-Threading)
+Muisti: 4 Gt (4 Gt kiinteät) DDR4 2133 MHz, yksi vapaa muistikanta, maks. 12 Gt
+Näytönohjain: Intel UHD Graphics 610
+Kiintolevy: 128 Gt SSD (2,5"" SATA 3)
+Optinen asema: ei
+Ääni: stereokaiuttimet, Dolby Audio, mikrofoni
+Verkko-ominaisuudet: WiFi 802.11ac (1x1), Bluetooth 4.2
+Liitännät: 2 x USB 3.1 Gen1, 1 x USB 2.0, HDMI 1.4b, kuuloke/mikrofoni, muistikortti
+Muistikortinlukija: 4-in-1 (SD, SDHC, SDXC, MMC)
+Webkamera: 0,3 megapikseliä
+Akku: 2-kennoinen 30 Wh Li-Ion, kesto jopa 5 tuntia
+Virtalähde: 45 W Round Tip
+Käyttöjärjestelmä: Windows 10 S
+Mitat: 362,2 x 251,5 x 19,9 mm
+Paino: n. 1,85 kg
+Takuu: 24 kk";"Purchased from Verkokkauppa.com. Credit card purchase on 12.12.2019. 3 Year warranty option applied.
+TVID: 1703717331
+TVSS: 375$uQbh3diV
+Computer:
+Lenovo IdeaPad S145 -15IWL
+Windows 10 Home x64
+
+
+Local account:
+Windows PIN 121219
+Windows user name: Vivago
+Windows PWD: V1v4g0P
+
+MS Account:
+Vivago.Prod@outlook.com
+pwd: V1v4g0&122019
+Account birthday: 12.12.1984
+";Unknown;Unknown;Unknown;Unknown;Unknown;x;x;Unknown;Unknown;Unknown
+Unknown;VE;03;0047;VE-03-0047;Unknown;Leak Checker;Greiner Vibrograf AG;Leak Checker 2000;9309072316;03. Test equipment, Mechanics;Production;PLASTONE;Unknown;YES;27.2.2021;27.2.2019;2;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Calibration interval agreed to 24 months with Plastone in Feb-2020. The Equiment manufacturer does not have recommendation for the calibrations interval;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;01;0048;VE-01-0048;Unknown;Torque screw driver (7Nm);Kolver;miniK1;12M090;01. Measuring equipment, Mechanics;Production;Plastone;Unknown;YES;27.9.2021;27.3.2019;2,5;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Calibration interval agreed to 30 months with Plastone in Feb-2020. The Equiment manufacturerrecommendation for  calibrations interval is 12-30 months depending on the use. In our case the utilization is considered low,;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;11;0049;VE-11-0049;Unknown;"Production test laptop VIVAGO-L450-1
+BaseStation FW Programming";Lenovo;Lenovo ThinkPad L450, Win 10 Pro;Unknown;11. Control PC;Production;MLB;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;8.4.2020;Kari Läikkö;"ThinkPad L450 Win 10 Pro ominaisuudet:
+Malli: ThinkPad L450
+Väri: Musta
+Näyttö: 14"" FHD (1920 x 1080)
+Suoritin: Intel Core i3-5005U @ 2,00 GHz
+Muisti: 8 GB DDR3L 
+Näytönohjain: Intel HD Graphics 5500
+Kiintolevy: 192 Gt SSD (2,5"" SATA)
+Optinen asema: ei
+Ääni: stereokaiuttimet, Dolby Audio, mikrofoni
+Verkko-ominaisuudet: LAN, WiFi , Bluetooth
+Liitännät: 3 x USB 3.0, LAN, kuuloke/mikrofoni, muistikortinlukija, telakointi, VGA, Mini-Display port 
+Muistikortinlukija: On
+Webkamera: On
+Akku: On 6kk takuu
+Virtalähde: 20 W 
+Käyttöjärjestelmä: Windows 10 Pro FIN
+Mitat (l x k x s): 33,9 x 2,3 x 23,9 cm
+Paino: n. 2kg
+Takuu: 12 kk, Akku 6kk";"Purchased from Tokmanni.fi. Credit card purchase on 08.04.2020.
+TVID: 1625948502
+TVSS: 375$uQbh3diV
+Computer:
+VIVAGO-L450-1
+
+
+Local account:
+Windows PIN 121219
+Windows user name: OMISTAJA
+Windows PWD: V1v4g0P
+
+MS Account:
+Vivago.Prod@outlook.com
+pwd: V1v4g0&122019
+Account birthday: 12.12.1984
+";Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;11;0050;VE-11-0050;Unknown;"Production test laptop VIVAGO-L450-2
+Remote for GSM BS testing
+";Lenovo;Lenovo ThinkPad L450, Win 10 Pro;Unknown;11. Control PC;Production;MLB;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;8.4.2020;Kari Läikkö;"ThinkPad L450 Win 10 Pro ominaisuudet:
+Malli: ThinkPad L450
+Väri: Musta
+Näyttö: 14"" FHD (1920 x 1080)
+Suoritin: Intel Core i3-5005U @ 2,00 GHz
+Muisti: 8 GB DDR3L 
+Näytönohjain: Intel HD Graphics 5500
+Kiintolevy: 192 Gt SSD (2,5"" SATA)
+Optinen asema: ei
+Ääni: stereokaiuttimet, Dolby Audio, mikrofoni
+Verkko-ominaisuudet: LAN, WiFi , Bluetooth
+Liitännät: 3 x USB 3.0, LAN, kuuloke/mikrofoni, muistikortinlukija, telakointi, VGA, Mini-Display port 
+Muistikortinlukija: On
+Webkamera: On
+Akku: On 6kk takuu
+Virtalähde: 20 W 
+Käyttöjärjestelmä: Windows 10 Pro FIN
+Mitat (l x k x s): 33,9 x 2,3 x 23,9 cm
+Paino: n. 2kg
+Takuu: 12 kk, Akku 6kk";"Purchased from Tokmanni.fi. Credit card purchase on 08.04.2020.
+TVID: 1630898259
+TVSS: 475$uQbh3diX
+Computer:
+VIVAGO-L450-2
+
+
+Local account:
+Windows PIN 121219
+Windows user name: OMISTAJA
+Windows PWD: V1v4g0P
+
+MS Account:
+Vivago.Prod@outlook.com
+pwd: V1v4g0&122019
+Account birthday: 12.12.1984
+";Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;11;0051;VE-11-0051;Unknown;"CARE Reprogrammer - Production test laptop VIVAGO-L450-3,
+";Lenovo;Lenovo ThinkPad L450, Win 10 Pro;Unknown;11. Control PC;Production;MLB;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;8.4.2020;Kari Läikkö;"ThinkPad L450 Win 10 Pro ominaisuudet:
+Malli: ThinkPad L450
+Väri: Musta
+Näyttö: 14"" FHD (1920 x 1080)
+Suoritin: Intel Core i3-5005U @ 2,00 GHz
+Muisti: 8 GB DDR3L 
+Näytönohjain: Intel HD Graphics 5500
+Kiintolevy: 192 Gt SSD (2,5"" SATA)
+Optinen asema: ei
+Ääni: stereokaiuttimet, Dolby Audio, mikrofoni
+Verkko-ominaisuudet: LAN, WiFi , Bluetooth
+Liitännät: 3 x USB 3.0, LAN, kuuloke/mikrofoni, muistikortinlukija, telakointi, VGA, Mini-Display port 
+Muistikortinlukija: On
+Webkamera: On
+Akku: On 6kk takuu
+Virtalähde: 20 W 
+Käyttöjärjestelmä: Windows 10 Pro FIN
+Mitat (l x k x s): 33,9 x 2,3 x 23,9 cm
+Paino: n. 2kg
+Takuu: 12 kk, Akku 6kk
+
+USB hub+External keyboard&Mouse
+Thermometer VE-04-0064
+CARE Reprogrammer Jig rev 2 #1
+Reprogrammer SW installed per instruction";"Purchased from Tokmanni.fi. Credit card purchase on 08.04.2020.
+TVID: 1629327551
+TVSS: 575$uQbh3diY
+Computer:
+VIVAGO-L450-3
+
+
+Local account:
+Windows PIN 121219
+Windows user name: OMISTAJA
+Windows PWD: V1v4g0P
+
+MS Account:
+Vivago.Prod@outlook.com
+pwd: V1v4g0&122019
+Account birthday: 12.12.1984
+";Unknown;x;x;Unknown;Unknown;Unknown;Unknown;CARE Reprogrammer #1;Unknown;Unknown
+Unknown;VE;08;0052;VE-08-0052;Unknown;CARE PCBA Test Jig, Rev 2 #1;Vivago;CARE Production tester;NA;08.  Test fixture;Production;R&D;Unknown;NO;NA;NA;NA;NA;Unknown;Unknown;Unknown;Unknown;Unknown;27.1.2021;Kari Läikkö;See CARE tester assembly instruction;Assembled by Eelis Cedeström, Jan 2021;Unknown;x;x;Unknown;Unknown;Unknown;Unknown;CARE&MOVE PCBA Tester #1;Unknown;Unknown
+Unknown;VE;08;0053;VE-08-0053;Unknown;CARE PCBA Test Jig, Rev 2  #2;Vivago;CARE Production tester;NA;08.  Test fixture;Production;R&D;Unknown;NO;NA;NA;NA;NA;Unknown;Unknown;Unknown;Unknown;Unknown;27.1.2021;Kari Läikkö;See CARE tester assembly instruction;Assembled by Eelis Cedeström, Jan 2021;Unknown;x;x;Unknown;Unknown;Unknown;Unknown;CARE&MOVE PCBA Tester #2;Unknown;Unknown
+Unknown;VE;05;0054;VE-05-0054;Unknown;Production Tester, MOVE & CARE #2;Lenovo/Vivago;Lenovo ThinkStation P330;S4QM9423;05. Production tester;Production;MLB;Unknown;YES;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Kari Läikkö;Unknown;"Includes IO card VE-04-0055, which defines the calibration date
+TW ID: 310353196
+TW user name:PCBA-Tester
+TW PWD: V1v4g0-123456
+";x;x;x;Unknown;Unknown;Unknown;Unknown;CARE&MOVE PCBA Tester #2;Unknown;Unknown
+Unknown;VE;04;0055;VE-04-0055;Unknown;Interface Card;National Instruments;NI PCIe-6351;1F26334;04. Test equipment, Electronics;Production;VE-05-0054;Unknown;YES;2021-02-20;2021-01-01;2;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Kari Läikkö;Unknown;Used in test station VE-05-0054;x;x;x;Unknown;Unknown;Unknown;Unknown;CARE&MOVE PCBA Tester #2;Unknown;Unknown
+Unknown;VE;02;0056;VE-02-0056;Unknown;RF Tester;Agilent;E4406A;US40061241;02. Measuring equipment, Electronics;Production;MLB;VGO2006;YES;2012-04-19;2011-04-19;1;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Eelis Cedersrtöm;Unknown;"Used as part of Move & CARE production tester #2
+Ulizes 10MHz clock output and RF input";x;x;x;Unknown;Unknown;Unknown;Unknown;CARE&MOVE PCBA Tester #2;Unknown;Unknown
+Unknown;VE;99;0057;VE-99-0057;Unknown;AC Adapter +12V DC;Cool Power Solutions;"Part number: CPS-12016EU/3630+
+Model:ATS+18T-W120E";NA;99. Miscaleneous;Production;MLB;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Kari Läikkö;Unknown;CARE&MOVE PCBA Test Jig power supply - SPARE;x;x;x;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;99;0058;VE-99-0058;Unknown;AC Adapter +12V DC;Cool Power Solutions;"Part number: CPS-12016EU/3630+
+Model:ATS+18T-W120E";NA;99. Miscaleneous;Production;MLB;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Kari Läikkö;Unknown;"
+CARE&MOVE PCBA Test Jig power supply - Tester 2";x;x;x;Unknown;Unknown;Unknown;Unknown;CARE&MOVE PCBA Tester #2;Unknown;Unknown
+Unknown;VE;07;0059;VE-07-0059;Unknown;Flash programming adapter;Elprotronic Inc;FlashPro430, USB-FPA 6.0;20110310;07. Electronics programmer;Production;MLB;Unknown;NO;NA;NA;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Eelis Cedersrtöm;Unknown;Used as part of CARE&Move production tester #2;x;x;x;Unknown;Unknown;Unknown;Unknown;CARE&MOVE PCBA Tester #2;Unknown;Unknown
+Unknown;VE;07;0060;VE-07-0060;Unknown;Flash programming adapter;Elprotronic Inc;FlashPro-ARM, XS-ISO-1.0;20171631;07. Electronics programmer;Production;MLB;Unknown;NO;NA;NA;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Eelis Cedersrtöm;Unknown;Used as part of CARE&Move production tester #2;x;x;x;Unknown;Unknown;Unknown;Unknown;CARE&MOVE PCBA Tester #2;Unknown;Unknown
+Unknown;VE;09;0061;VE-09-0061;Unknown;Bar code reader, USB, handheld;Symbol Technologies Inc.;DS4308;15160010501557;09. Bar code reader;Production;MLB;Unknown;NO;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;??;??;Unknown;CARE&MOVE  PCBA Tester #2;x;x;x;Unknown;Unknown;Unknown;Unknown;CARE&MOVE PCBA Tester #2;Unknown;Unknown
+Unknown;VE;08;0062;VE-08-0062;Unknown;CARE Reprogrammer jig Rev 2 #1;Vivago;CARE Reprogrammer;NA;08.  Test fixture;Production;MLB;Unknown;NO;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;CARE Reprogrammer  #1;Unknown;x;x;Unknown;Unknown;Unknown;Unknown;CARE Reprogrammer #1;Unknown;Unknown
+Unknown;VE;08;0063;VE-08-0063;Unknown;CARE Reprogrammer jig Rev 2 #1;Vivago;CARE Reprogrammer;NA;08.  Test fixture;Production;MLB;Unknown;NO;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;CARE Reprogrammer - SPARE;Unknown;x;x;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;04;0064;VE-04-0064;Unknown;USB Thermometer, for CARE Reprogrammer;Cleware GMBH;USB-Humidity&Thermometer, Art.-Nr 18-1;NA;04. Test equipment, Electronics;Production;MLB;Unknown;NO;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;CARE Reprogrammer #1;Unknown;x;x;Unknown;Unknown;Unknown;Unknown;CARE Reprogrammer #1;Unknown;Unknown
+Unknown;VE;04;0065;VE-04-0065;Unknown;USB Thermometer, for CARE Reprogrammer;Cleware GMBH;USB-Humidity&Thermometer, Art.-Nr 18-1;NA;04. Test equipment, Electronics;Production;MLB;Unknown;NO;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;CARE Reprogrammer - SPARE;Unknown;x;x;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;99;0066;VE-99-0066;Unknown;AC adapter +5V DC;Cool Power Solutions;"ATS005T-W050E
+Part No: CPS-05010EU/3630+";Unknown;99. Miscaleneous;Production;MLB;Unknown;NO;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;CARE Reprogrammer #1;Unknown;x;x;Unknown;Unknown;Unknown;Unknown;CARE Reprogrammer #1;Unknown;Unknown
+Unknown;VE;99;0067;VE-99-0067;Unknown;AC adapter +5V DC;Cool Power Solutions;"ATS005T-W050E
+Part No: CPS-05010EU/3630+";Unknown;99. Miscaleneous;Production;MLB;Unknown;NO;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;CARE Reprogrammer - SPARE;Unknown;x;x;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;07;0068;VE-07-0068;Unknown;Flash programming adapter;Elprotronic Inc;FlashPro430, USB-FPA 6.0;20111571;07. Electronics programmer;Production;MLB;Unknown;NO;NA;NA;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Eelis Cedersrtöm;Unknown;"Used for CARE ReProgrammer #1
+License update 18.08.2021";Unknown;x;x;Unknown;Unknown;Unknown;Unknown;CARE Reprogrammer #1;Unknown;Unknown
+Unknown;VE;07;0069;VE-07-0069;Unknown;Flash programming adapter;Elprotronic Inc;FlashPro430, USB-FPA 6.0;20110311;07. Electronics programmer;Unknown;Unknown;Unknown;NO;NA;NA;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Eelis Cedersrtöm;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;07;0070;VE-07-0070;Unknown;Flash programming adapter;Elprotronic Inc;FlashPro430, USB-FPA 4.3;20070728;07. Electronics programmer;Production;Vivago;Unknown;NO;NA;NA;NA;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Eelis Cedersrtöm;Unknown;Vivago R&D Use;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown
+Unknown;VE;03;0071;VE-03-0071;Unknown;Leak Checker;Greiner Vibrograf AG;Leak Checker Prime;6606210822;03. Test equipment, Mechanics;Production;MLB;Unknown;Yes;2023-08-01;2021-08-01;2;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;23.08.2021 / Order 3342-3;Kari Läikkö;Unknown;Calibration interval agreed to 24 months with Plastone in Feb-2020. The Equiment manufacturer does not have recommendation for the calibrations interval;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown;Unknown; ;Unknown;Unknown

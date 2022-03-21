@@ -1,0 +1,25 @@
+{
+  "name": "laiterekisteri",
+  "version": "1.0.0",
+  "description": "Deno exercise using postgress database. Deployed to Heroku.",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrii1512/laiterekisteri.git"
+  },
+  "author": "Jouni Riimala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrii1512/laiterekisteri/issues"
+  },
+  "homepage": "https://github.com/jrii1512/laiterekisteri#readme",
+  "dependencies": {
+    "tedious": "^14.3.0"
+  }
+}

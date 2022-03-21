@@ -1,0 +1,26 @@
+<% layout("./layouts.eta") %>
+
+<form action = "/" method = "get">
+    <input type = "submit" value = "takaisin" id="back">
+</form>
+
+<h3>Vivago Laiterekisteri</h3>
+<table>
+        <tr>
+            <th>Equipment Id</th><th>MOVE</th><th>CARE</th><th>FIDO</th><th>Point Ethernet</th><th>Point GSM</th>
+            <th>Laiteliitin</th><th>Locate</th><th>Software</th>
+            <th>Part Of Setup</th>
+        </tr>
+
+
+<% it.product.forEach((h) =>{%>
+
+    <tr>
+        <td><a href="/products/<%= h[1].productID %>"><%= product.equipmentid %></a></td> <td><%= h[2] %></td> <td><%= h[3] %></td><td><%= h[4] %></td><td><%= h[5] %></td> <td><%= h[6] %>
+        </td> <td><%= h[7] %></td> <td><%= h[8] %></td> <td><%= h[9] %></td> <td><%= h[10] %></td>        
+    </tr>
+<%}); %>
+
+</table>
+</div>
+

@@ -1,0 +1,11 @@
+<% layout("./layouts.eta") %>
+<h3>remove pagella ollaan</h3>
+<% it.delEq.forEach((d) =>{%>
+<span><%it%></span>
+<div id="removeEq">    
+      alert("Haluatko varmasti poistaa tietueen ", d[11] + " (k,e)?");
+
+ 
+</div>
+
+<%}); %>

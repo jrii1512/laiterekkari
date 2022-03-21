@@ -1,0 +1,82 @@
+﻿ID;prefix;category;number;oldID;status;manufacture;model;serialnro;location;use;created;equipment Id;equipmentDesc;categoryDesc
+1;VE;2;1;10.01.200907;-;Fluke;187;77950080;-;-;1.1.2000;VE-02-0001;Digital Multi Meter;02. Measuring equipment, Electronics
+2;VE;2;2;10.02.200907;-;Fluke;187;79340115;-;-;1.1.2000;VE-02-0002;Digital Multi Meter;02. Measuring equipment, Electronics
+3;VE;2;3;10.03.200907;-;Fluke;77III;76850534;-;-;1.1.2000;VE-02-0003;Digital Multi Meter;02. Measuring equipment, Electronics
+4;VE;2;4;10.04.-;-;Circuitmate;LM22A;71130453;-;-;1.1.2000;VE-02-0004;Digital Multi Meter;02. Measuring equipment, Electronics
+5;VE;2;5;10.05.200908;-;Fluke;189;93950122;-;-;1.1.2000;VE-02-0005;Digital Multi Meter;02. Measuring equipment, Electronics
+6;VE;2;6;10.06.200908;-;Fluke;179;94370271;-;-;1.1.2000;VE-02-0006;Digital Multi Meter;02. Measuring equipment, Electronics
+7;VE;2;7;10.07.200908;-;Fluke;179;95920329;-;-;1.1.2000;VE-02-0007;Digital Multi Meter;02. Measuring equipment, Electronics
+8;VE;2;8;20.01.200907;-;;124 - NO DM8840203;9,44401E+11;-;-;1.1.2000;VE-02-0008;Oscilloscope, portable;02. Measuring equipment, Electronics
+9;VE;2;9;20.02.-;-;LeCroy;LP142;1659;-;-;1.1.2000;VE-02-0009;Oscilloscope;02. Measuring equipment, Electronics
+10;VE;2;10;20.03.-;-;Tektronix;TDS210;B091765;-;-;1.1.2000;VE-02-0010;Oscilloscope;02. Measuring equipment, Electronics
+11;VE;1;11;30.01.-;-;Mettler Toledo;PB303-SDR;1121020322;-;-;1.1.2000;VE-01-0011;Scale;01. Measuring equipment, Mechanics
+12;VE;1;12;30.02.-;-;Accurat ;2000;59580390406;-;-;1.1.2000;VE-01-0012;Scale;01. Measuring equipment, Mechanics
+13;VE;1;13;40.01.-;-;Mitutoyo;"Code No. 500-162U
+Model No. CD-20DC";53089;-;-;1.1.2000;VE-01-0013;Caliber;01. Measuring equipment, Mechanics
+14;VE;1;14;40.02.-;-;Samson;- ;- ;-;-;1.1.2000;VE-01-0014;Caliber;01. Measuring equipment, Mechanics
+15;VE;2;15;50.01.-;-;Protek;2GHz RF field analyzer 3200;320001927;-;-;1.1.2000;VE-02-0015;RF Analyzer;02. Measuring equipment, Electronics
+16;VE;4;16;60.01.-;-;Tecstar;TAC30-3;3080139;-;-;1.1.2000;VE-04-0016;Power Supply;04. Test equipment, Electronics
+17;VE;4;17;60.02.-;-;Tecstar;TAC30-3;3080166;-;-;1.1.2000;VE-04-0017;Power Supply;04. Test equipment, Electronics
+18;VE;4;18;60.03.-;-;Tecstar;TAC30-3;3080165;-;-;1.1.2000;VE-04-0018;Power Supply;04. Test equipment, Electronics
+19;VE;4;19;60.04.-;-;Kenwood;PAC30-2;3040018;-;-;1.1.2000;VE-04-0019;Power Supply;04. Test equipment, Electronics
+20;VE;4;20;60.05.-;-;Protek;3003B;H002305;-;-;1.1.2000;VE-04-0020;Power Supply;04. Test equipment, Electronics
+21;VE;4;21;60.06.-;-;Mascot;- ;- ;-;-;1.1.2000;VE-04-0021;Power Supply;04. Test equipment, Electronics
+22;VE;4;22;70.01.-;-;LG Precision Co.;FG-7002C;8111696;-;-;1.1.2000;VE-04-0022;Function Generator;04. Test equipment, Electronics
+23;VE;2;23;80.01.-;-;Hewlet Packard (HP);-;-;-;-;1.1.2000;VE-02-0023;Spectrum Analyzer;02. Measuring equipment, Electronics
+24;VE;3;24;-;-;Greiner Vibrograf AG;Leak Checker 2000;xxx;PLASTONE;Production;1.1.2000;VE-03-0024;Leak Checker;03. Test equipment, Mechanics
+25;VE;3;25;-;-;Greiner Vibrograf AG;Leak Checker Prime;xxx;MLB;Other;1.1.2000;VE-03-0025;Leak Checker;03. Test equipment, Mechanics
+26;VE;3;26;-;-;Greiner Vibrograf AG;Leak Checker Prime;660918624;PLASTONE;Production;1.1.2000;VE-03-0026;Leak Checker;03. Test equipment, Mechanics
+27;VE;4;27;-;Active;National Instruments;NI PCIe-6351;01DEE121;VE-10-0029;Production;1.1.2000;VE-04-0027;Interface Card;04. Test equipment, Electronics
+28;VE;5;28;-;-;Vivago/Lenovo;Lenovo ThinkStation P330;S4JE4072;MLB;production;1.1.2000;VE-05-0028;Production Tester, MOVE & CARE #1;05. Production tester
+29;VE;10;29;-;-;Datalogic;Ulyxe 6W@1064 F160S-M39;xxx;MLB;Production;1.1.2000;VE-10-0029;Laser printer;10. Laser Printer
+30;VE;10;30;-;-;Datalogic;Ulyxe 6W@1064 F160S-M39;xxx;MLB;Production;1.1.2000;VE-10-0030;Laser printer;10. Laser Printer
+31;VE;2;31;-;Active;Agilent;E4406A;US41513584;MLB;Production;1.1.2000;VE-02-0031;RF Tester;02. Measuring equipment, Electronics
+32;VE;7;32;-;-;Elprotronic Inc;FlashPro430, USB-FPA 6.1;20130765;MLB;Production;1.1.2000;VE-07-0032;Flash programming adapter;07. Electronics programmer
+33;VE;7;33;-;-;Elprotronic Inc;FlashPro-ARM, XS-ISO-1.1;20190335;MLB;Production;1.1.2000;VE-07-0033;Flash programming adapter;07. Electronics programmer
+34;VE;9;34;-;-;Symbol Technologies Inc.;DS4308;1,516E+13;Vivago;R&D;1.1.2000;VE-09-0034;Bar code reader, USB, handheld;09. Bar code reader
+35;VE;8;35;-;Active;Vivago;MOVE Production tester;NA;MLB;Production;1.1.2000;VE-08-0035;MOVE PCBA Test Jig #1;08.  Test fixture
+36;VE;8;36;-;Active;Vivago;MOVE Production tester;NA;MLB;Production;1.1.2000;VE-08-0036;MOVE PCBA Test Jig #2;08.  Test fixture
+37;VE;9;37;-;-;Symbol Technologies Inc.;DS4308;1,8337E+13;-;Production;1.1.2000;VE-09-0037;Bar code reader, USB, handheld;09. Bar code reader
+38;VE;9;38;-;-;Symbol Technologies Inc.;DS4308;1,8337E+13;MLB;Production;1.1.2000;VE-09-0038;Bar code reader, USB, handheld;09. Bar code reader
+39;VE;99;39;-;-;Cool Power Solutions;"Part number: CPS-12016EU/3630+
+Model:ATS+18T-W120E";NA;MLB;Production;1.1.2000;VE-99-0039;AC Adapter;99. Miscaleneous
+40;VE;5;40;-;-;Vivago;Raspberry Pi;-;NOTE;Production;1.1.2000;VE-05-0040;MOVE OQC Tester;05. Production tester
+41;VE;4;41;-;-;Vivago;I/O Test card V01;NA;Vivago;R&D;1.1.2000;VE-04-0041;I/O test card for ETH Base stations;04. Test equipment, Electronics
+42;VE;4;42;-;-;Vivago;I/O Test card V02;NA;Vivago;R&D;1.1.2000;VE-04-0042;I/O test card for GSM Base stations;04. Test equipment, Electronics
+43;VE;4;43;-;-;Vivago;I/O Test card. Proto 1;NA;Vivago;R&D;1.1.2000;VE-04-0043;I/O test card for base stations;04. Test equipment, Electronics
+44;VE;4;44;-;-;Vivago;OUTput test card (GSM);NA;Vivago;-;1.1.2000;VE-04-0044;OUTput test card for GSM base stations;04. Test equipment, Electronics
+45;VE;11;45;-;-;Lenovo;Lenovo V530S;YL003V5M;MLB;Production;1.1.2000;VE-11-0045;Laser printer control PC;11. Control PC
+46;VE;11;46;-;-;Lenovo;Lenovo IDEAPAD S145, Win 10 Home edition;PF1L3VHT;MLB;Production;1.1.2000;VE-11-0046;Test laptop for DI and Add-on (Väylätesteri);11. Control PC
+47;VE;3;47;-;-;Greiner Vibrograf AG;Leak Checker 2000;9309072316;PLASTONE;Production;1.1.2000;VE-03-0047;Leak Checker;03. Test equipment, Mechanics
+48;VE;1;48;-;-;Kolver;miniK1;12M090;Plastone;Production;1.1.2000;VE-01-0048;Torque screw driver (7Nm);01. Measuring equipment, Mechanics
+49;VE;11;49;-;-;Lenovo;Lenovo ThinkPad L450, Win 10 Pro;-;MLB;Production;1.1.2000;VE-11-0049;"Production test laptop VIVAGO-L450-1
+BaseStation FW Programming";11. Control PC
+50;VE;11;50;-;-;Lenovo;Lenovo ThinkPad L450, Win 10 Pro;-;MLB;Production;1.1.2000;VE-11-0050;"Production test laptop VIVAGO-L450-2
+Remote for GSM BS testing
+";11. Control PC
+51;VE;11;51;-;-;Lenovo;Lenovo ThinkPad L450, Win 10 Pro;-;MLB;Production;1.1.2000;VE-11-0051;"CARE Reprogrammer - Production test laptop VIVAGO-L450-3,
+";11. Control PC
+52;VE;8;52;-;-;Vivago;CARE Production tester;NA;R&D;Production;1.1.2000;VE-08-0052;CARE PCBA Test Jig, Rev 2 #1;08.  Test fixture
+53;VE;8;53;-;-;Vivago;CARE Production tester;NA;R&D;Production;1.1.2000;VE-08-0053;CARE PCBA Test Jig, Rev 2  #2;08.  Test fixture
+54;VE;5;54;-;-;Lenovo/Vivago;Lenovo ThinkStation P330;S4QM9423;MLB;Production;1.1.2000;VE-05-0054;Production Tester, MOVE & CARE #2;05. Production tester
+55;VE;4;55;-;-;National Instruments;NI PCIe-6351;1F26334;VE-05-0054;Production;1.1.2000;VE-04-0055;Interface Card;04. Test equipment, Electronics
+56;VE;2;56;-;-;Agilent;E4406A;US40061241;MLB;Production;1.1.2000;VE-02-0056;RF Tester;02. Measuring equipment, Electronics
+57;VE;99;57;-;-;Cool Power Solutions;"Part number: CPS-12016EU/3630+
+Model:ATS+18T-W120E";NA;MLB;Production;1.1.2000;VE-99-0057;AC Adapter +12V DC;99. Miscaleneous
+58;VE;99;58;-;-;Cool Power Solutions;"Part number: CPS-12016EU/3630+
+Model:ATS+18T-W120E";NA;MLB;Production;1.1.2000;VE-99-0058;AC Adapter +12V DC;99. Miscaleneous
+59;VE;7;59;-;-;Elprotronic Inc;FlashPro430, USB-FPA 6.0;20110310;MLB;Production;1.1.2000;VE-07-0059;Flash programming adapter;07. Electronics programmer
+60;VE;7;60;-;-;Elprotronic Inc;FlashPro-ARM, XS-ISO-1.0;20171631;MLB;Production;1.1.2000;VE-07-0060;Flash programming adapter;07. Electronics programmer
+61;VE;9;61;-;-;Symbol Technologies Inc.;DS4308;1,516E+13;MLB;Production;1.1.2000;VE-09-0061;Bar code reader, USB, handheld;09. Bar code reader
+62;VE;8;62;-;-;Vivago;CARE Reprogrammer;NA;MLB;Production;1.1.2000;VE-08-0062;CARE Reprogrammer jig Rev 2 #1;08.  Test fixture
+63;VE;8;63;-;-;Vivago;CARE Reprogrammer;NA;MLB;Production;1.1.2000;VE-08-0063;CARE Reprogrammer jig Rev 2 #1;08.  Test fixture
+64;VE;4;64;-;-;Cleware GMBH;USB-Humidity&Thermometer, Art.-Nr 18-1;NA;MLB;Production;1.1.2000;VE-04-0064;USB Thermometer, for CARE Reprogrammer;04. Test equipment, Electronics
+65;VE;4;65;-;-;Cleware GMBH;USB-Humidity&Thermometer, Art.-Nr 18-1;NA;MLB;Production;1.1.2000;VE-04-0065;USB Thermometer, for CARE Reprogrammer;04. Test equipment, Electronics
+66;VE;99;66;-;-;Cool Power Solutions;"ATS005T-W050E
+Part No: CPS-05010EU/3630+";-;MLB;Production;1.1.2000;VE-99-0066;AC adapter +5V DC;99. Miscaleneous
+67;VE;99;67;-;-;Cool Power Solutions;"ATS005T-W050E
+Part No: CPS-05010EU/3630+";-;MLB;Production;1.1.2000;VE-99-0067;AC adapter +5V DC;99. Miscaleneous
+68;VE;7;68;-;-;Elprotronic Inc;FlashPro430, USB-FPA 6.0;20111571;MLB;Production;1.1.2000;VE-07-0068;Flash programming adapter;07. Electronics programmer
+69;VE;7;69;-;-;Elprotronic Inc;FlashPro430, USB-FPA 6.0;20110311;-;-;1.1.2000;VE-07-0069;Flash programming adapter;07. Electronics programmer
+70;VE;7;70;-;-;Elprotronic Inc;FlashPro430, USB-FPA 4.3;20070728;Vivago;Production;1.1.2000;VE-07-0070;Flash programming adapter;07. Electronics programmer
+71;VE;3;71;-;-;Greiner Vibrograf AG;Leak Checker Prime;6606210822;MLB;Production;1.1.2000;VE-03-0071;Leak Checker;03. Test equipment, Mechanics

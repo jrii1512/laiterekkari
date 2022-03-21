@@ -1,0 +1,90 @@
+<% layout("./layouts.eta") %>
+
+<h1>New record</h1>
+
+<span><%it%></span>
+    <form action = "/register" method = "post" name ="startForm" class="formi">
+      
+        <!-- id generated from prefix, category and from number -->
+        <label for="prefix"><b>Prefix</b></label>
+          <input type = "text" id = "prefix" required>
+        <p>
+
+        <label for="category"><b>Category</b></label>
+          <input type = "text" id = "category" required>
+          <p>
+
+        <label for="categorydesc"><b>Category Description</b></label>
+          <input type = "text" id = "categorydesc">
+          <p>
+
+        <label for="number"><b>Number</b></label>
+          <input type = "text" id = "number" onchange="createEquipmentID()" required>
+          <p>
+
+        <label for="productid"><b>Product ID</b></label>
+          <input type = "text" id = "productid">
+        <p>
+
+        <label for="oldid"><b>Old ID</b></label>
+          <input type = "text" id = "oldid">
+          <p>
+
+        <label for="status"><b>Status</b></label>
+          <select name = "status" id = "status">
+            <option value = "active" selected="selected">Active</option>
+            <option value = "disabled">Disabled</option>
+          </select>
+        <p>
+        
+        <label for="manufacture"><b>Manufacture</b></label>
+           <select name = "manufacture" id = "manufacture">
+            <option value = "select" selected="selected">Select</option>
+            <option value = "accurat">Accurat</option>
+            <option value = "agilent">Agilent</option>
+            <option value = "circuitmate">Circuitmate</option>
+            <option value = "clewaregmbh">Cleware GMBH</option>
+            <option value = "coolpowersolution">Cool Power Solution</option>
+            <option value = "datalogic">Datalogic</option>
+            <option value = "elprotronic">Elprotronic Inc.</option>
+            <option value = "fluke">Fluke</option>
+            <option value = "greinervibrografag">vibrograf Ag</option>
+            <option value = "hewletpackard">Hewlet Packard (HP)</option>
+            <option value = "kenwood">Kenwood</option>
+            <option value = "kolver">Kolver</option>
+            <option value = "lenovo">Lenovo</option>
+            <option value = "lenovovivago">Lenovo / Vivago</option>
+            <option value = "lgprecision">LG Precision Co.</option>
+            <option value = "mascot">Mascot</option>
+            <option value = "mettleratoledo">Mettler Toledo</option>
+            <option value = "mitutoyo">Mitutoyo</option>
+            <option value = "nationalinstruments">National Instruments</option>
+            <option value = "protek">Protek</option>
+            <option value = "samson">Samson</option>
+            <option value = "symboltech">Symbol Techologies Inc.</option>
+            <option value = "tecstar">Tecstar</option>
+            <option value = "tektronix">Tektronix</option>
+            <option value = "vivago">Vivago</option>
+            <option value = "vivagolenovo">Vivago / Lenovo</option>
+          </select>
+        <p>
+
+        <label for="model"><b>Model</b></label>
+          <input type = "text" name = "model">
+        <p>
+
+        <label for="serialnro"><b>Serial nro</b></label>
+          <input type = "text" name = "serialnro">
+        <p>
+
+        <label for="location"><b>Location</b></label>
+          <input type = "text" name = "location">
+        <p>
+
+
+        <label for="user"><b>Use</b></label>
+          <input type = "text" name = "use">
+        <p>
+
+        <input type = "submit" value = "Kantaan" id="laheta">
+    </form>

@@ -1,0 +1,247 @@
+<% layout("./layouts.eta") %>
+
+
+<script>
+const createEquipmentID = () => {
+    document.getElementById("productid").value = document.getElementById("prefix").value + "-" + document.getElementById("category").value + "-" + document.getElementById("number").value; 
+    }
+</script>
+
+<span><%it%></span>
+<div id="uusi" class="tabcontent">
+    <form action = "/register" method = "post" name ="startForm" class="formi">
+      
+        <!-- id generated from prefix, category and from number -->
+        <label for="prefix"><b>Prefix</b></label>
+          <input type = "text" id = "prefix" required>
+        <p>
+
+        <label for="category"><b>Category</b></label>
+          <input type = "text" id = "category" required>
+          <p>
+
+        <label for="categorydesc"><b>Category Description</b></label>
+          <input type = "text" id = "categorydesc">
+          <p>
+
+        <label for="number"><b>Number</b></label>
+          <input type = "text" id = "number" onchange="createEquipmentID()" required>
+          <p>
+
+        <label for="productid"><b>Product ID</b></label>
+          <input type = "text" id = "productid">
+        <p>
+
+        <label for="oldid"><b>Old ID</b></label>
+          <input type = "text" id = "oldid">
+          <p>
+
+        <label for="status"><b>Status</b></label>
+          <select name = "status" id = "status">
+            <option value = "active" selected="selected">Active</option>
+            <option value = "disabled">Disabled</option>
+          </select>
+        <p>
+        
+        <label for="manufacture"><b>Manufacture</b></label>
+           <select name = "manufacture" id = "manufacture">
+            <option value = "select" selected="selected">Select</option>
+            <option value = "accurat">Accurat</option>
+            <option value = "agilent">Agilent</option>
+            <option value = "circuitmate">Circuitmate</option>
+            <option value = "clewaregmbh">Cleware GMBH</option>
+            <option value = "coolpowersolution">Cool Power Solution</option>
+            <option value = "datalogic">Datalogic</option>
+            <option value = "elprotronic">Elprotronic Inc.</option>
+            <option value = "fluke">Fluke</option>
+            <option value = "greinervibrografag">vibrograf Ag</option>
+            <option value = "hewletpackard">Hewlet Packard (HP)</option>
+            <option value = "kenwood">Kenwood</option>
+            <option value = "kolver">Kolver</option>
+            <option value = "lenovo">Lenovo</option>
+            <option value = "lenovovivago">Lenovo / Vivago</option>
+            <option value = "lgprecision">LG Precision Co.</option>
+            <option value = "mascot">Mascot</option>
+            <option value = "mettleratoledo">Mettler Toledo</option>
+            <option value = "mitutoyo">Mitutoyo</option>
+            <option value = "nationalinstruments">National Instruments</option>
+            <option value = "protek">Protek</option>
+            <option value = "samson">Samson</option>
+            <option value = "symboltech">Symbol Techologies Inc.</option>
+            <option value = "tecstar">Tecstar</option>
+            <option value = "tektronix">Tektronix</option>
+            <option value = "vivago">Vivago</option>
+            <option value = "vivagolenovo">Vivago / Lenovo</option>
+          </select>
+        <p>
+
+        <label for="model"><b>Model</b></label>
+          <input type = "text" name = "model">
+        <p>
+
+        <label for="serialnro"><b>Serial nro</b></label>
+          <input type = "text" name = "serialnro">
+        <p>
+
+        <label for="location"><b>Location</b></label>
+          <input type = "text" name = "location">
+        <p>
+
+
+        <label for="user"><b>Use</b></label>
+          <input type = "text" name = "use">
+        <p>
+
+        <input type = "submit" value = "Kantaan" id="laheta">
+    </form>
+</div>
+<p>
+
+<div id="other" class="tabcontent">
+    <form action = "/other" method = "post" name ="startForm" class="formi">
+
+    <div id = "pvm">
+        <label for="purchasingDate"><b>Purchasing Date</b></label>
+          <input type = "date" name = "purchasingDate">
+          <p>
+    </div>
+
+        <label for="purchasingBy"><b>Purchased by</b></label>
+          <input type = "text" name = "purchasingBy">
+        <p>
+
+        <label for="supplier"><b>Supplier</b></label>
+          <input type = "text" name = "supplier">
+        <p>
+       
+        <label for="IDSupplier"><b>ID & Supplier</b></label>
+          <input type = "text" name = "idsupplier">
+        <p>
+
+        <label for="gxp"><b>GxpAssesmentResults</b></label>
+          <input type = "text" name = "gxp">
+        <p>
+
+      <div id = "need">
+        <label for="validationNeed"><b>Validation need</b></label>
+          <select name = "validationNeed" id = "validationNeed">
+            <option value = "yes" selected="selected">Yes</option>
+            <option value = "no">No</option>
+          </select>
+      </div>
+        
+        <p>
+        
+      <div id = "pvm">
+        <label for="lastValidationDate"><b>Last validation date</b></label>
+          <input type = "date" name = "lastValidationDate">
+      </div>
+
+        <p>
+
+        <label for="validationReport"><b>Validation Report</b></label>
+          <input type = "text" name = "validationreport">
+        <p>
+
+        <label for="specification"><b>Specification</b></label>
+          <input type = "text" name = "specification">
+        <p>
+
+        <label for="notes"><b>Notes</b></label>
+          <textarea rows = "4" cols = "60" name = "notes"></textarea>
+        <p>
+
+      <div id = "need">
+        <label for="maintenanceNeed"><b>Maintenance need</b></label>
+          <select name = "maintenanceNeed" id = "maintenanceNeed">
+            <option selected = "selecte" value = "yes">Yes</option>
+            <option value = "no">No</option>
+          </select>
+      </div>
+        <p>
+
+        <input type = "submit" value = "Kantaan" id = "hankinta">
+
+</form>
+</div>
+
+<div id="product" class="tabcontent">
+  <form method = "post" action = "/product">
+      <label for="product"><b>Product</b></label>
+          <select name = "product" id = "product">
+            <option value = "select" selected="selected">Select</option>
+            <option value = "move">Move</option>
+            <option value = "care">Care</option>
+            <option value = "fido">Fido</option>
+            <option value = "vivapoint">Vivapoint</option>
+            <option value = "vivapointgsm">Vivapoint GSM</option>
+            <option value = "deviceinterface">Device Interface</option>
+            <option value = "addon">Add-On</option>
+            <option value = "partofsetup">Part Of Setup</option>
+            <option value = "software">Software</option>
+            <option value = "generic">Generic</option>
+          </select>
+      <p>
+      <label for="productDesc"><b>Product description</b></label>
+        <textarea rows = "4" cols = "60" name = "productDesc"></textarea>
+      <p>
+    <input type = "submit" value = "submit">
+  </form>
+</div>
+
+
+<div id="alert" class="tabcontent">
+<!-- Other alerts-->
+<table>
+  <tr><th>Other Alert</th></tr>
+  <tr>
+    <td></td>
+  </tr>
+</table>
+
+<table>
+  <tr><th>Calibration Alert</th></tr>
+  <tr>
+    <td></td>
+  </tr>
+</table>
+
+</div>
+
+
+<div id="calibration" class="tabcontent">
+  <form method = "post" action = "/calibration">
+  <!--
+      <label for="calibID"><b>Calibration ID</b></label>
+        <input type = "text" name = "calibID">
+      <p>
+      <label for="equipID"><b>Equipment ID</b></label>
+        <input type = "text" name = "equipID">
+      <p>
+    
+      <label for="orderID"><b>Order ID</b></label>
+      <input type = "text" name = "orderID">
+      <p>
+  -->
+      <label for="caldueDate"><b>Calibration Due Date</b></label>
+      <input type = "date" name = "calibDueDate">
+      <p>
+      <label for="lastCalDate"><b>Last Calibration Date</b></label>
+      <input type = "date" name = "lastCalDate">
+      <p>
+      <label for="calIntervalYears"><b>Calibration Interval Years</b></label>
+      <input type = "number" name = "calIntervalYears">
+      <p>
+      <label for="calibrationCert"><b>Calibration Certification</b></label>
+      <input type = "text" name = "calibrationCert">
+      <p>
+
+    <input type = "submit" value = "submit">
+  </form>
+</div>
+
+
+
+<script>
+const event = new Date();
+document.getElementById('huoltoPVM').valueAsDate = event;</script>

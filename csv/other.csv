@@ -1,0 +1,232 @@
+﻿otherID;purchasedate;purchaseby;supplier;idsupplier;gxp assesment;Validation need;last validation date;validation report;specification;notes;maintenance need;maintentance instruction;equipment id;created
+1; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-02-0001;1.1.2000
+2; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-02-0002;1.1.2000
+3; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-02-0003;1.1.2000
+4; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-02-0004;1.1.2000
+5;1.9.2007;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-02-0005;1.1.2000
+6;1.9.2007;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-02-0006;1.1.2000
+7;1.1.2008;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-02-0007;1.1.2000
+8; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-02-0008;1.1.2000
+9; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-02-0009;1.1.2000
+10; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-02-0010;1.1.2000
+11; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-01-0011;1.1.2000
+12; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-01-0012;1.1.2000
+13; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-01-0013;1.1.2000
+14; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-01-0014;1.1.2000
+15; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-02-0015;1.1.2000
+16; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-04-0016;1.1.2000
+17; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-04-0017;1.1.2000
+18; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-04-0018;1.1.2000
+19; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-04-0019;1.1.2000
+20; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-04-0020;1.1.2000
+21; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-04-0021;1.1.2000
+22; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-04-0022;1.1.2000
+23; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-02-0023;1.1.2000
+24; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-03-0024;1.1.2000
+25; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-03-0025;1.1.2000
+26;1.4.2019;Eelis Cederström;-;-;-;-; 1.1.2000;-;-;"intially purchased for NOTE, moved to PLASTONE Apr-2021. Device was in service and returned in Aug-2021
+Calibration interval agreed to 24 months with Plastone in Feb-2020. The Equiment manufacturer does not have recommendation for the calibrations interval";-;-;VE-03-0026;1.1.2000
+27;1.3.2019;Eelis Cederström;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-04-0027;1.1.2000
+28;1.3.2019;Kari Läikkö;-;-;-;-; 1.1.2000;-;-;"Includes IO card VE-04-0027, which defines the calibration date
+TV ID: 1261775036TV SS: B5K#hi#90tDy";-;-;VE-05-0028;1.1.2000
+29; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-10-0029;1.1.2000
+30;1.9.2019;Niina Vilkas;-;VGO2011;-;-; 1.1.2000;-;Supplier Klinger;Initially purchased for NOTE, Moved to MLB Nov-2020;-;-;VE-10-0030;1.1.2000
+31; 1.1.2000;Eelis Cedersrtöm;-;-;-;-; 1.1.2000;-;-;"Used as part of Move & CARE production tester #1.
+Ulizes 10MHz clock output and RF input";-;-;VE-02-0031;1.1.2000
+32; 1.1.2000;Eelis Cedersrtöm;-;-;-;-; 1.1.2000;-;-;Used as part of CARE&Move production tester #1.;-;-;VE-07-0032;1.1.2000
+33; 1.1.2000;Eelis Cedersrtöm;-;-;-;-; 1.1.2000;-;-;Used as part of CARE&Move production tester #1.;-;-;VE-07-0033;1.1.2000
+34; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;Current manufacturer Zebra;-;-;VE-09-0034;1.1.2000
+35; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-08-0035;1.1.2000
+36; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;CARE&MOVE  PCBA Tester #2;-;-;VE-08-0036;1.1.2000
+37;1.4.2019;Kari Läikkö;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-09-0037;1.1.2000
+38;1.4.2019;Kari Läikkö;-;-;-;-; 1.1.2000;-;-;CARE&MOVE  PCBA Tester #1;-;-;VE-09-0038;1.1.2000
+39; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;CARE&MOVE PCBA Test Jig power supply - used for tester #1;-;-;VE-99-0039;1.1.2000
+40; 1.1.2000;-;-;NNO VE-05-0040;-;-; 1.1.2000;-;MOVE_OQC_Tester_Description_and_Set-Up_instruction;-;-;-;VE-05-0040;1.1.2000
+41;1.8.2019;Eelis Cederström;-;-;-;-; 1.1.2000;-;-;Initially developped for production, but not feasible in practice;-;-;VE-04-0041;1.1.2000
+42;1.8.2019;Eelis Cederström;-;-;-;-; 1.1.2000;-;-;Initially developped for production, but not feasible in practice;-;-;VE-04-0042;1.1.2000
+43;1.8.2019;Eelis Cederström;-;-;-;-; 1.1.2000;-;-;Proto based on V01 PCB;-;-;VE-04-0043;1.1.2000
+44;1.8.2019;Eelis Cederström;-;-;-;-; 1.1.2000;-;-;Part of  I/O Test card V02 (only led section);-;-;VE-04-0044;1.1.2000
+45;1.5.2019;Kari Läikkö;-;-;-;-; 1.1.2000;-;-;"Used for laser printer @MLB
+TeamViewer:
+VE-11-0045
+1 375 505 625
+Viv4g0-4500-11-VE";-;-;VE-11-0045;1.1.2000
+46;12.12.2019;Kari Läikkö;-;-;-;-; 1.1.2000;-;"Ideapad S145-15 Win 10 S ominaisuudet:
+Malli: Ideapad S145-15IWL
+Väri: Onyx Black, musta
+Näyttö: 15,6"" FHD (1920 x 1080) 16:9 TN, matalaheijasteinen
+Suoritin: Intel Pentium Gold 5405U (2,3 GHz, 2ydintä, 2 Mt, 15 W, Multi-Threading)
+Muisti: 4 Gt (4 Gt kiinteät) DDR4 2133 MHz, yksi vapaa muistikanta, maks. 12 Gt
+Näytönohjain: Intel UHD Graphics 610
+Kiintolevy: 128 Gt SSD (2,5"" SATA 3)
+Optinen asema: ei
+Ääni: stereokaiuttimet, Dolby Audio, mikrofoni
+Verkko-ominaisuudet: WiFi 802.11ac (1x1), Bluetooth 4.2
+Liitännät: 2 x USB 3.1 Gen1, 1 x USB 2.0, HDMI 1.4b, kuuloke/mikrofoni, muistikortti
+Muistikortinlukija: 4-in-1 (SD, SDHC, SDXC, MMC)
+Webkamera: 0,3 megapikseliä
+Akku: 2-kennoinen 30 Wh Li-Ion, kesto jopa 5 tuntia
+Virtalähde: 45 W Round Tip
+Käyttöjärjestelmä: Windows 10 S
+Mitat: 362,2 x 251,5 x 19,9 mm
+Paino: n. 1,85 kg
+Takuu: 24 kk";"Purchased from Verkokkauppa.com. Credit card purchase on 12.12.2019. 3 Year warranty option applied.
+TVID: 1703717331
+TVSS: 375$uQbh3diV
+Computer:
+Lenovo IdeaPad S145 -15IWL
+Windows 10 Home x64
+
+
+Local account:
+Windows PIN 121219
+Windows user name: Vivago
+Windows PWD: V1v4g0P
+
+MS Account:
+Vivago.Prod@outlook.com
+pwd: V1v4g0&122019
+Account birthday: 12.12.1984
+";-;-;VE-11-0046;1.1.2000
+47; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;Calibration interval agreed to 24 months with Plastone in Feb-2020. The Equiment manufacturer does not have recommendation for the calibrations interval;-;-;VE-03-0047;1.1.2000
+48; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;Calibration interval agreed to 30 months with Plastone in Feb-2020. The Equiment manufacturerrecommendation for  calibrations interval is 12-30 months depending on the use. In our case the utilization is considered low,;-;-;VE-01-0048;1.1.2000
+49;8.4.2020;Kari Läikkö;-;-;-;-; 1.1.2000;-;"ThinkPad L450 Win 10 Pro ominaisuudet:
+Malli: ThinkPad L450
+Väri: Musta
+Näyttö: 14"" FHD (1920 x 1080)
+Suoritin: Intel Core i3-5005U @ 2,00 GHz
+Muisti: 8 GB DDR3L 
+Näytönohjain: Intel HD Graphics 5500
+Kiintolevy: 192 Gt SSD (2,5"" SATA)
+Optinen asema: ei
+Ääni: stereokaiuttimet, Dolby Audio, mikrofoni
+Verkko-ominaisuudet: LAN, WiFi , Bluetooth
+Liitännät: 3 x USB 3.0, LAN, kuuloke/mikrofoni, muistikortinlukija, telakointi, VGA, Mini-Display port 
+Muistikortinlukija: On
+Webkamera: On
+Akku: On 6kk takuu
+Virtalähde: 20 W 
+Käyttöjärjestelmä: Windows 10 Pro FIN
+Mitat (l x k x s): 33,9 x 2,3 x 23,9 cm
+Paino: n. 2kg
+Takuu: 12 kk, Akku 6kk";"Purchased from Tokmanni.fi. Credit card purchase on 08.04.2020.
+TVID: 1625948502
+TVSS: 375$uQbh3diV
+Computer:
+VIVAGO-L450-1
+
+
+Local account:
+Windows PIN 121219
+Windows user name: OMISTAJA
+Windows PWD: V1v4g0P
+
+MS Account:
+Vivago.Prod@outlook.com
+pwd: V1v4g0&122019
+Account birthday: 12.12.1984
+";-;-;VE-11-0049;1.1.2000
+50;8.4.2020;Kari Läikkö;-;-;-;-; 1.1.2000;-;"ThinkPad L450 Win 10 Pro ominaisuudet:
+Malli: ThinkPad L450
+Väri: Musta
+Näyttö: 14"" FHD (1920 x 1080)
+Suoritin: Intel Core i3-5005U @ 2,00 GHz
+Muisti: 8 GB DDR3L 
+Näytönohjain: Intel HD Graphics 5500
+Kiintolevy: 192 Gt SSD (2,5"" SATA)
+Optinen asema: ei
+Ääni: stereokaiuttimet, Dolby Audio, mikrofoni
+Verkko-ominaisuudet: LAN, WiFi , Bluetooth
+Liitännät: 3 x USB 3.0, LAN, kuuloke/mikrofoni, muistikortinlukija, telakointi, VGA, Mini-Display port 
+Muistikortinlukija: On
+Webkamera: On
+Akku: On 6kk takuu
+Virtalähde: 20 W 
+Käyttöjärjestelmä: Windows 10 Pro FIN
+Mitat (l x k x s): 33,9 x 2,3 x 23,9 cm
+Paino: n. 2kg
+Takuu: 12 kk, Akku 6kk";"Purchased from Tokmanni.fi. Credit card purchase on 08.04.2020.
+TVID: 1630898259
+TVSS: 475$uQbh3diX
+Computer:
+VIVAGO-L450-2
+
+
+Local account:
+Windows PIN 121219
+Windows user name: OMISTAJA
+Windows PWD: V1v4g0P
+
+MS Account:
+Vivago.Prod@outlook.com
+pwd: V1v4g0&122019
+Account birthday: 12.12.1984
+";-;-;VE-11-0050;1.1.2000
+51;8.4.2020;Kari Läikkö;-;-;-;-; 1.1.2000;-;"ThinkPad L450 Win 10 Pro ominaisuudet:
+Malli: ThinkPad L450
+Väri: Musta
+Näyttö: 14"" FHD (1920 x 1080)
+Suoritin: Intel Core i3-5005U @ 2,00 GHz
+Muisti: 8 GB DDR3L 
+Näytönohjain: Intel HD Graphics 5500
+Kiintolevy: 192 Gt SSD (2,5"" SATA)
+Optinen asema: ei
+Ääni: stereokaiuttimet, Dolby Audio, mikrofoni
+Verkko-ominaisuudet: LAN, WiFi , Bluetooth
+Liitännät: 3 x USB 3.0, LAN, kuuloke/mikrofoni, muistikortinlukija, telakointi, VGA, Mini-Display port 
+Muistikortinlukija: On
+Webkamera: On
+Akku: On 6kk takuu
+Virtalähde: 20 W 
+Käyttöjärjestelmä: Windows 10 Pro FIN
+Mitat (l x k x s): 33,9 x 2,3 x 23,9 cm
+Paino: n. 2kg
+Takuu: 12 kk, Akku 6kk
+
+USB hub+External keyboard&Mouse
+Thermometer VE-04-0064
+CARE Reprogrammer Jig rev 2 #1
+Reprogrammer SW installed per instruction";"Purchased from Tokmanni.fi. Credit card purchase on 08.04.2020.
+TVID: 1629327551
+TVSS: 575$uQbh3diY
+Computer:
+VIVAGO-L450-3
+
+
+Local account:
+Windows PIN 121219
+Windows user name: OMISTAJA
+Windows PWD: V1v4g0P
+
+MS Account:
+Vivago.Prod@outlook.com
+pwd: V1v4g0&122019
+Account birthday: 12.12.1984
+";-;-;VE-11-0051;1.1.2000
+52;27.1.2021;Kari Läikkö;-;-;-;-; 1.1.2000;-;See CARE tester assembly instruction;Assembled by Eelis Cedeström, Jan 2021;-;-;VE-08-0052;1.1.2000
+53;27.1.2021;Kari Läikkö;-;-;-;-; 1.1.2000;-;See CARE tester assembly instruction;Assembled by Eelis Cedeström, Jan 2021;-;-;VE-08-0053;1.1.2000
+54; 1.1.2000;Kari Läikkö;-;-;-;-; 1.1.2000;-;-;"Includes IO card VE-04-0055, which defines the calibration date
+TW ID: 310353196
+TW user name:PCBA-Tester
+TW PWD: V1v4g0-123456
+";-;-;VE-05-0054;1.1.2000
+55; 1.1.2000;Kari Läikkö;-;-;-;-; 1.1.2000;-;-;Used in test station VE-05-0054;-;-;VE-04-0055;1.1.2000
+56; 1.1.2000;Eelis Cedersrtöm;-;VGO2006;-;-; 1.1.2000;-;-;"Used as part of Move & CARE production tester #2
+Ulizes 10MHz clock output and RF input";-;-;VE-02-0056;1.1.2000
+57; 1.1.2000;Kari Läikkö;-;-;-;-; 1.1.2000;-;-;CARE&MOVE PCBA Test Jig power supply - SPARE;-;-;VE-99-0057;1.1.2000
+58; 1.1.2000;Kari Läikkö;-;-;-;-; 1.1.2000;-;-;"
+CARE&MOVE PCBA Test Jig power supply - Tester 2";-;-;VE-99-0058;1.1.2000
+59; 1.1.2000;Eelis Cedersrtöm;-;-;-;-; 1.1.2000;-;-;Used as part of CARE&Move production tester #2;-;-;VE-07-0059;1.1.2000
+60; 1.1.2000;Eelis Cedersrtöm;-;-;-;-; 1.1.2000;-;-;Used as part of CARE&Move production tester #2;-;-;VE-07-0060;1.1.2000
+61; 1.1.2000;??;-;-;-;-; 1.1.2000;-;-;CARE&MOVE  PCBA Tester #2;-;-;VE-09-0061;1.1.2000
+62; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;CARE Reprogrammer  #1;-;-;VE-08-0062;1.1.2000
+63; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;CARE Reprogrammer - SPARE;-;-;VE-08-0063;1.1.2000
+64; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;CARE Reprogrammer #1;-;-;VE-04-0064;1.1.2000
+65; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;CARE Reprogrammer - SPARE;-;-;VE-04-0065;1.1.2000
+66; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;CARE Reprogrammer #1;-;-;VE-99-0066;1.1.2000
+67; 1.1.2000;-;-;-;-;-; 1.1.2000;-;-;CARE Reprogrammer - SPARE;-;-;VE-99-0067;1.1.2000
+68; 1.1.2000;Eelis Cedersrtöm;-;-;-;-; 1.1.2000;-;-;"Used for CARE ReProgrammer #1
+License update 18.08.2021";-;-;VE-07-0068;1.1.2000
+69; 1.1.2000;Eelis Cedersrtöm;-;-;-;-; 1.1.2000;-;-;-;-;-;VE-07-0069;1.1.2000
+70; 1.1.2000;Eelis Cedersrtöm;-;-;-;-; 1.1.2000;-;-;Vivago R&D Use;-;-;VE-07-0070;1.1.2000
+71;23.8.2021;Kari Läikkö ;-;-;-;-; 1.1.2000;-;-;Calibration interval agreed to 24 months with Plastone in Feb-2020. The Equiment manufacturer does not have recommendation for the calibrations interval. Order 3342-3;-;-;VE-03-0071;1.1.2000

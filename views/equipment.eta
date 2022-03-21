@@ -1,0 +1,40 @@
+<% layout("./layouts.eta") %>
+
+<form action = "/" method = "get">
+    <input type = "submit" value = "takaisin" id="back">
+</form>
+
+
+<h3>Vivago Laiterekisteri</h3>
+<h3><a href = "/createEq">Uusi tietue</a></h3>
+
+<table>
+        <tr>
+            <th>X</th><th>Equipment Id</th>
+            <th>Equipment Description</th>
+            <th>Model</th>
+            <th>Serial nro</th>
+            <th>Status</th>                        
+            <th>Manufacture</th>
+            <th>Location</th>        
+            
+
+            <th>Used by</th>
+        </tr>
+
+<% it.equipments.forEach((h) =>{%>
+    <tr>
+        <td><a href = "/startremoval/<%= h[11] %>">X</a></td>
+        <td><a href = "/editEq/<%= h[11] %>"><%= h[11] %></a></td>        
+        <td><%= h[12] %></td>
+        <td><%= h[6] %></td>
+        <td><%= h[7] %></td>
+        <td><%= h[4] %></td> 
+        <td><%= h[5] %></td>
+        <td><%= h[8] %></td> 
+        <td><%= h[9] %></td> 
+    </tr>
+<%}); %>
+
+</table>
+</div>

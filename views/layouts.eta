@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+function switchTab(evt, target) {
+console.log('target:', target);
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(target).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("laite").click();
+
+</script>
+
+<meta charset="utf-8">
+<link rel="icon" href="data:;base64,=">
+<title>Vivago Device Register</title>
+
+<style>
+.box{
+    margin:auto;
+    background-color: gray;
+    border: 5px solid;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px 10px;
+    width: 99%;
+    align:center;
+    }
+
+#subUusi{
+  width:60px;
+}
+
+span#separator{
+  margin-top:30;
+  margin-bottom:30;
+}
+
+div#kyselyt{
+   border: solid, 1px;
+    border-color:black;
+    background-color: gray;
+    color: black;
+    padding: 3px;
+    text-align: center;
+    display: inline-block;
+    font-size:12px;
+    font-weight: bold;
+}
+
+input#lastValidationDate{
+  width:400px;
+}
+
+select{
+  height:50px;
+}
+
+.formi{
+  margin-left:0;
+  margin-right:0;
+  margin-top: 100px;
+  margin-bottom:100px;
+  width:80%;
+  height: 90%;
+  padding:5px;
+  border: 1px solid red;
+  border-color: red;
+  border-radius: 10px;
+}
+
+h3{
+color:white;
+}
+
+table, td {
+  border: 1px solid black;
+  border-color:white;
+  text-align:left;
+  background-color: black;
+  color: white;
+  height:98%;
+  font-size:18px;
+}
+th, td{
+    padding: 5px 5px 5px 5px
+}
+
+input{
+  margin-top:3px;
+  width:40%;
+  height:30px;
+  font-size:18px;
+  padding-left:10px;
+  padding-top:3px;
+  padding-bottom:3px;
+  color: black;
+  }
+
+
+input#back{
+  width:20%;
+  font-weight:bold;
+  font-size:18px;
+  text-align: center;
+}
+
+#laheta{
+    margin-top:40px;
+    border: solid, 1px;
+    border-color:black;
+    background-color: white;
+    color: black;
+    padding: 3px;
+    text-align: center;
+    display: inline-block;
+    font-size:18px;
+    font-weight: bold;
+}
+
+#yhteenveto{
+    border: solid, 1px;
+    border-color:black;
+    background-color: white;
+    color: black;
+    padding: 3px;
+    text-align: center;
+    display: inline-block;
+    font-size:18px;
+    font-weight: bold;
+}
+
+#Kuvat{
+  background-color: white;
+}
+
+
+label{
+    display:inline-block;
+    width:20%;
+    height:30px;
+    font-size:26px;
+    margin-right:50px;
+    color: white;
+    }
+
+div#huollot{
+    margin-left:1px;
+    margin-right:1px;
+    margin-top: 20px;
+    margin-bottom:100px;
+    width:100%;
+    height: 100%;
+  }
+
+@media only screen and (max-device-width: 1100px) and (max-device-height: 1600px) and (-webkit-min-device-pixel-ratio: 2.625)  {
+
+.box{
+    margin-top:20%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:gray;
+    border: 5px solid;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px 10px;
+    width: 100%;
+    align:center;
+    }
+
+div#kyselyt{
+   border: solid, 1px;
+    border-color:black;
+    background-color: gray;
+    color: black;
+    padding: 3px;
+    text-align: center;
+    display: inline-block;
+    font-size:24px;
+    font-weight: bold;
+}
+
+
+.formi{
+  margin-left:1px;
+  margin-right:1px;
+  margin-top: 100px;
+  margin-bottom:100px;
+  width:95%;
+  height: 100%;
+  padding:5px;
+  border: 1px solid red;
+  border-color: red;
+  border-radius: 10px;
+}
+
+table, td {
+  border: 1px solid black;
+  border-color:white;
+  text-align:left;
+  background-color: black;
+  color: white;
+  height:98%;
+  font-size:22px;
+  font-weight:bold;
+
+}
+th, td{
+    padding: 5px 5px 5px 5px
+}
+
+input{
+  margin-top:3px;
+  width:30%;
+  height:60px;
+  font-size:30px;
+  font-weight: bold;
+  padding-left:10px;
+  padding-top:3px;
+  padding-bottom:3px;
+  color: black;
+  }
+
+#back{
+  width:20%;
+  font-weight:bold;
+  font-size:30px;
+  text-align: center;
+}
+
+#hetki{
+  width:20%;
+}
+
+#laheta{
+    margin-top:40px;
+    border: solid, 1px;
+    border-color:black;
+    background-color: white;
+    color: black;
+    padding: 3px;
+    text-align: center;
+    display: inline-block;
+    font-size:36px;
+    font-weight: bold;
+}
+
+#yhteenveto{
+    border: solid, 1px;
+    border-color:black;
+    background-color: white;
+    color: black;
+    padding: 3px;
+    text-align: center;
+    display: inline-block;
+    font-size:36px;
+    font-weight: bold;
+}
+
+label{
+    width:200px;
+    height:40px;
+    font-size:30px;
+    font-weight:bold;
+    margin-right:20px;
+    color: white;
+    }
+
+div#data{
+    margin-left:1px;
+    margin-right:1px;
+    margin-top: 100px;
+    margin-bottom:100px;
+    width:100%;
+    height: 100%;
+  }
+
+div#kuvat{
+  background-color: white;
+}
+</style>
+</head>
+
+<body onload="switchTab(event, 'data')">
+
+<ul>
+<div class = "box">
+<div class="tab">
+  <button class="tablinks" onclick="switchTab(event, 'laite')" id = "def">Kyselyt</button>
+  <button class="tablinks" onclick="switchTab(event, 'alert')">Hälytykset</button>
+
+  <button><a href = "/newRecord">New Record</a></button>
+</div>
+    <%~ it.body %>
+
+</div>
+</ul>
+</body>
+</html>
+
+
+
