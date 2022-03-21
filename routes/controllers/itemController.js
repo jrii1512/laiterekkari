@@ -18,11 +18,12 @@ var log = [];
 var imageFilePath = '';
 debugger;
 
+/*
 const showMain = async ({ response }) => {
     console.log('Main page called');
-    response.body = await renderFile('../views/selector.eta');
+    response.body = await renderFile('../views/equipment.eta');
 };
-
+*/
 
 const removeRec = async ({ response, params }) => {
     console.log("controller, getRemoveRec");
@@ -31,9 +32,13 @@ const removeRec = async ({ response, params }) => {
 
     //alert, confirmation, prompt antavat deno - oak zydeemissä vain cli versiot.
     //Kuinka saada windows confirmation prompt aikaiseksi ?    
-    await itemServices.deleteRecord(eqid);
-    //alert("Tietue tuhottu");        
-    
+    let resp = prompt("Tuhoamisen vahvistus (k,e)");
+    if (resp === 'k') {
+        await itemServices.deleteRecord(eqid);
+    }
+    else {
+        alert("Tietueen tuhoaminen peruutettu");        
+    }
     response.redirect("/");
 }
 
@@ -134,7 +139,7 @@ const updaterec = async ({ response, params }) => {
 
 
 export {
-    showMain,
+    //showMain,
     getEquipments,
     getOther,
     getProducts,

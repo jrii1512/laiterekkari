@@ -113,7 +113,7 @@ const getAllEquipments = async () => {
     console.log('Equipments taulusta haku');
     await client.connect();
     const res = await client.queryArray(
-        "SELECT * FROM \"Equipment\" ORDER BY equipmentid DESC"
+        "SELECT * FROM \"Equipment\" ORDER BY created DESC"
     );
     await client.end();
     //console.log('devices -> ' + res.rows);

@@ -1,5 +1,7 @@
 <% layout("./layouts.eta") %>
 
+<div id="laite" class="tabcontent">
+
 <form action = "/" method = "get">
     <input type = "submit" value = "takaisin" id="back">
 </form>

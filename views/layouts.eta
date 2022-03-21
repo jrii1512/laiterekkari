@@ -303,7 +303,7 @@ div#kuvat{
 <ul>
 <div class = "box">
 <div class="tab">
-  <button class="tablinks" onclick="switchTab(event, 'laite')" id = "def">Kyselyt</button>
+  <button class="tablinks" onclick="switchTab(event, 'laite')" id = "def">Laitteet</button>
   <button class="tablinks" onclick="switchTab(event, 'alert')">Hälytykset</button>
 
   <button><a href = "/newRecord">New Record</a></button>

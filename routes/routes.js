@@ -9,10 +9,10 @@ router.post('/register', item.register);
 router.get('/startremoval/:equipmentid', item.removeRec);
 //router.post('/delete/:equipmentid', item.deleteRec);
 
-router.get('/', item.showMain);
+router.get('/', item.getEquipments);
 
 router.get('/newRecord', item.gotoNewRecord);
-router.get('/equipments', item.getEquipments);
+//router.get('/equipments', item.getEquipments);
 router.get('/other', item.getOther);
 router.get('/products', item.getProducts);
 router.get('/createEq', item.createEq);
