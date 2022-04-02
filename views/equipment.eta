@@ -35,35 +35,50 @@
     <% var i = 0 %>
     
         <% if (h[3] === null) { %>
-            <%= h[3] = '-'%>
+            <% h[3] = '-'%>
+        <%} else if (h[3] === 'ei aktiivinen') {%>
+        <% h[3] = 'Ei aktiivinen' %>
         <%}%>
 
         <%if (h[8] === null) { %>
-            <%= h[8] = '-'%>
+            <% h[8] = '-'%>
         <%}%>
 
+        <% if (h[5] === "ei") { %>
+            <% h[5] = 'Ei' %>
+        <% } else if (h[5] === "kyllä") { %>
+            <% h[5] = 'Kyllä'%>
+        <%}%>
+
+        <% if (h[5] === "ei") { %>
+            <% h[5] = 'Ei' %>
+        <% } else if (h[5] === "kyllä") { %>
+            <% h[5] = 'Kyllä'%>
+        <%}%>
+
+
         <% if (h[9] === "yes") { %>
-            <%= h[9] = 'Kyllä' %>
+            <% h[9] = 'Kyllä' %>
         <% } else if (h[9] === "no") { %>
-            <%= h[9] = 'Ei'%>
+            <% h[9] = 'Ei'%>
         <%}%>
 
         <% if (h[10] === "yes") { %>
-            <%= h[10] = 'Kyllä' %>
-        <% } else if (h[10] === "no") { %>
-            <%= h[10] = 'Ei'%>
+            <% h[10] = 'Kyllä' %>
+        <% } else { %>
+            <% h[10] = 'Ei'%>
         <%}%>
 
         <% if (h[14] === "yes") { %>
-            <%= h[14] = 'Kyllä' %>
+            <% h[14] = 'Kyllä' %>
         <% } else if (h[14] === "no") { %>
-            <%= h[14] = 'Ei'%>
+            <% h[14] = 'Ei'%>
         <%}%>
 
 
         <% console.log("Equipment kenttien indeksointi") %>
         <% h.forEach((r)=>{ %>
-            <% console.log(i, r)%>
+            <% console.log(i, r)%> 
             <% i++ %>
         <%})%>
 
@@ -76,8 +91,8 @@
         <td><%= h[2] %></td> <%/* equipment desc */%>
         <td><%= h[5] %></td> <%/* product */%>
         <td><%= h[3] %></td> <%/* status */%>
-        <td><%= h[6] %></td> <%/*purchaseby*/%>
-        <td><%= h[7] %></td> <%/*purchasedate */%>
+        <td><%= h[6] %></td> <%/* purchaseby*/%>
+        <td><%= h[7] %></td> <%/* purchasedate */%>
         <td><%= h[8] %></td> <%/* supplier */%>
         <td><%= h[9] %></td> <%/* calibrated */%>
         <td><%= h[10] %></td> <%/* maintenanceneed */%>

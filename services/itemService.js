@@ -384,13 +384,14 @@ const getAllData = async (lookFor) => {
     console.log('Services, datan haku useasta taulusta');
     await client.connect();
     res = await client.queryArray(
-        'SELECT DISTINCT \"equip\".eid, \"equip\".equipmentid, \"equip\".equipmentdesc, \"equip\".status, \"equip\".usedby,\"prod\".product,\"purch\".purchaseby,\"purch\".purchasedate,\"purch\".supplier,\"maint\".maintneed,\"valid\".validationneed, "valid".lastvalidationdate,\"calib\".calduedate,\"calib\".lastcaldate, \"calib\".applied, \"calib\".calintervalyears FROM \"equip\" JOIN \"prod\" ON \"equip\".eid = \"prod\".equipid JOIN \"calib\" ON \"equip\".eid = \"calib\".equipid JOIN \"purch\" ON \"equip\".eid = \"purch\".equipid JOIN \"maint\" ON \"equip\".eid = \"maint\".equipid JOIN \"valid\" ON \"equip\".eid = \"calib\".equipid ORDER BY \"equip\".eid DESC'
+        'SELECT DISTINCT \"equip\".eid, \"equip\".equipmentid, \"equip\".equipmentdesc, \"equip\".status, \"equip\".usedby,\"prod\".product,\"purch\".purchaseby,\"purch\".purchasedate,\"purch\".supplier,\"maint\".maintneed,\"valid\".validationneed, "valid".lastvalidationdate,\"calib\".calduedate,\"calib\".lastcaldate, \"calib\".applied, \"calib\".calintervalyears FROM \"equip\" JOIN \"prod\" ON \"equip\".eid = \"prod\".equipid JOIN \"calib\" ON \"equip\".eid = \"calib\".equipid JOIN \"purch\" ON \"equip\".eid = \"purch\".equipid JOIN \"maint\" ON \"equip\".eid = \"maint\".equipid JOIN \"valid\" ON \"equip\".eid = \"valid\".equipid ORDER BY \"equip\".eid DESC'
     );
     await client.end();
     //console.log('data -> ' + res.rows);
 
     console.log("getAllData values:\n")
     var i = 0;
+    
     res.rows.forEach((e) => {        
         e.forEach((r)=>{            
             console.log(i, r)            
@@ -411,11 +412,11 @@ const getAllData = async (lookFor) => {
         //Alarm
         var today = new Date();
         console.log("today: ", today)
-        /*Diff between today and calduedate
+        //Diff between today and calduedate
         console.log("calduedate:", e[12])
         const diffTime = Math.abs(today - e[12]);
         const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        console.log(diffDays + " days");*/
+        console.log(diffDays + " days");
     });
 
     //console.log("service, getAllData -> ", res.rows);

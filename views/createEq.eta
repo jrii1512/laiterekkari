@@ -62,11 +62,11 @@
     document.getElementById("eqdesc").value = "Testi kuva";
     //document.getElementById("calInput").value = 2
 
-    var now = new Date();
+    var Eiw = new Date();
 
-    var day = ("0" + now.getDate()).slice(-2);
-    var month = ("0" + (now.getMonth() + 1)).slice(-2);
-    var today = now.getFullYear()+"-"+(month)+"-"+(day) ;    
+    var day = ("0" + Eiw.getDate()).slice(-2);
+    var month = ("0" + (Eiw.getMonth() + 1)).slice(-2);
+    var today = Eiw.getFullYear()+"-"+(month)+"-"+(day) ;    
     document.getElementById("purchdate").value = today;
   }
 </script>
@@ -74,10 +74,10 @@
 <script>
 const today = () => {
     console.log("today- funktio")
-    var now = new Date();
-    var day = ("0" + now.getDate()).slice(-2);
-    var month = ("0" + (now.getMonth() + 1)).slice(-2);
-    var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
+    var Eiw = new Date();
+    var day = ("0" + Eiw.getDate()).slice(-2);
+    var month = ("0" + (Eiw.getMonth() + 1)).slice(-2);
+    var today = Eiw.getFullYear()+"-"+(month)+"-"+(day) ;
     document.getElementById("purchdate").value = today;
     return today;
     }
@@ -125,8 +125,8 @@ const today = () => {
 
         <label for="status"><b>Status</b></label>
           <select name = "status" name = "status">
-            <option value = "active" >Aktiivinen</option>
-            <option value = "ei aktiivinen" selected="selected">Ei aktiivinen</option>
+            <option value = "Active" >Aktiivinen</option>
+            <option value = "Ei aktiivinen" selected="selected">Ei aktiivinen</option>
           </select>
         <p>
         
@@ -134,8 +134,8 @@ const today = () => {
           <input type = "text" name = "specification" value = "-">
         <p>
 
-        <label for="notes"><b>Muistiinpanot</b></label>
-          <textarea rows = "6" cols = "30" name = "notes">Ei</textarea>
+        <label for="Eites"><b>MuistiinpaEit</b></label>
+          <textarea rows = "6" cols = "30" name = "Eites">Ei</textarea>
         <p>
 </div>
 
@@ -161,33 +161,33 @@ const today = () => {
 
         <label for="manufacture"><b>Valmistaja</b></label>
            <select name = "manufacture" name = "manufacture" id = "mfact" placeholder = "pakollinen" required>
-            <option value = "ei" selected="selected">Ei valittu</option>
-            <option value = "accurat">Accurat</option>
-            <option value = "agilent">Agilent</option>
-            <option value = "circuitmate">Circuitmate</option>
-            <option value = "clewaregmbh">Cleware GMBH</option>
-            <option value = "coolpowersolution">Cool Power Solution</option>
-            <option value = "datalogic">Datalogic</option>
-            <option value = "elprotronic">Elprotronic Inc.</option>
-            <option value = "fluke">Fluke</option>
-            <option value = "greinervibrografag">vibrograf Ag</option>
-            <option value = "hewletpackard">Hewlet Packard (HP)</option>
-            <option value = "kenwood">Kenwood</option>
-            <option value = "kolver">Kolver</option>
-            <option value = "lenovo">Lenovo</option>
-            <option value = "lenovovivago">Lenovo / Vivago</option>
-            <option value = "lgprecision">LG Precision Co.</option>
-            <option value = "mascot">Mascot</option>
-            <option value = "mettleratoledo">Mettler Toledo</option>
-            <option value = "mitutoyo">Mitutoyo</option>
-            <option value = "nationalinstruments">National Instruments</option>
-            <option value = "protek">Protek</option>
-            <option value = "samson">Samson</option>
-            <option value = "symboltech">Symbol Techologies Inc.</option>
-            <option value = "tecstar">Tecstar</option>
-            <option value = "tektronix">Tektronix</option>
-            <option value = "vivago">Vivago</option>
-            <option value = "vivagolenovo">Vivago / Lenovo</option>
+            <option value = "Ei" selected="selected">Ei valittu</option>
+            <option value = "Accurat">Accurat</option>
+            <option value = "Agilent">Agilent</option>
+            <option value = "Circuitmate">Circuitmate</option>
+            <option value = "Clewaregmbh">Cleware GMBH</option>
+            <option value = "Coolpowersolution">Cool Power Solution</option>
+            <option value = "Datalogic">Datalogic</option>
+            <option value = "Elprotronic">Elprotronic Inc.</option>
+            <option value = "Fluke">Fluke</option>
+            <option value = "GrEinervibrografag">vibrograf Ag</option>
+            <option value = "Hewletpackard">Hewlet Packard (HP)</option>
+            <option value = "Kenwood">Kenwood</option>
+            <option value = "Kolver">Kolver</option>
+            <option value = "LeEivo">LeEivo</option>
+            <option value = "LeEivovivago">LeEivo / Vivago</option>
+            <option value = "Lgprecision">LG Precision Co.</option>
+            <option value = "Mascot">Mascot</option>
+            <option value = "Mettleratoledo">Mettler Toledo</option>
+            <option value = "Mitutoyo">Mitutoyo</option>
+            <option value = "Nationalinstruments">National Instruments</option>
+            <option value = "Protek">Protek</option>
+            <option value = "Samson">Samson</option>
+            <option value = "Symboltech">Symbol Techologies Inc.</option>
+            <option value = "Tecstar">Tecstar</option>
+            <option value = "Tektronix">Tektronix</option>
+            <option value = "Vivago">Vivago</option>
+            <option value = "VivagoleEivo">Vivago / LeEivo</option>
           </select>
         <p>
 
@@ -214,35 +214,35 @@ const today = () => {
   <div class = "column right">
         <label for="product"><b>Tuote</b></label>
            <select name = "product" name = "product">
-            <option value = "ei" selected="selected">Ei tuotetta</option>
-            <option value = "move">MOVE</option>
-            <option value = "care">CARE</option>
+            <option value = "Ei" selected="selected">Ei tuotetta</option>
+            <option value = "Move">MOVE</option>
+            <option value = "Care">CARE</option>
             <option value = "Fido">FIDO</option>
-            <option value = "pointethernet">Point Ethernet</option>
-            <option value = "pointgsm">Point GSM</option>
-            <option value = "laitelDI-2">DI-2</option>
-            <option value = "laitelDI-2-B">DI-2-B</option>
-            <option value = "locate">Locate</option>
-            <option value = "sw">Software</option>
-            <option value = "setup">Part of Setup</option>
+            <option value = "Pointethernet">Point Ethernet</option>
+            <option value = "Pointgsm">Point GSM</option>
+            <option value = "LaitelDI-2">DI-2</option>
+            <option value = "LaitelDI-2-B">DI-2-B</option>
+            <option value = "Locate">Locate</option>
+            <option value = "SW">Software</option>
+            <option value = "Setup">Part of Setup</option>
           </select>
         <p>
 
         <label for="maintenanceneed"><b>Ylläpitotarve</b></label>
           <select name = "maintenanceneed">
-            <option value = "yes" selected="selected">Kyllä</option>
-            <option value = "no">Ei</option>
+            <option value = "Kyllä" selected="selected">Kyllä</option>
+            <option value = "Ei">Ei</option>
           </select>  
         <p>
 
-        <label for="maintenanceinstruction"><b>Ylläpito-ohje</b></label>
-          <textarea rows = "6" cols = "30" name = "maintenanceinstruction">Ei</textarea>
+        <label for="maintenancEinstruction"><b>Ylläpito-ohje</b></label>
+          <textarea rows = "6" cols = "30" name = "maintenancEinstruction">Ei</textarea>
         <p>
 
         <label for="validationneed"><b>Validointi tarve</b></label>
           <select name = "validationneed">
-            <option value = "yes" selected="selected">Kyllä</option>
-            <option value = "no">Ei</option>
+            <option value = "Kyllä" selected="selected">Kyllä</option>
+            <option value = "Ei">Ei</option>
           </select>  
         <p>
 
@@ -260,8 +260,8 @@ const today = () => {
 
         <label for="calapplied"><b>Kalibroitu</b>
           <select name = "calapplied">
-            <option value = "no" selected="selected">Ei</option>
-            <option value = "yes">Kyllä</option>
+            <option value = "Ei" selected="selected">Ei</option>
+            <option value = "Kyllä">Kyllä</option>
             
           </select>  
         <p>
