@@ -31,14 +31,14 @@
 
         <label for="status"><b>Status</b></label>
           <select name = "status" id = "status">
-            <option value = "active" selected="selected">Active</option>
-            <option value = "disabled">Disabled</option>
+            <option value = "active" selected="selected">Aktiivinen</option>
+            <option value = "disabled">Ei aktiivinen</option>
           </select>
         <p>
         
         <label for="manufacture"><b>Manufacture</b></label>
            <select name = "manufacture" id = "manufacture">
-            <option value = "select" selected="selected">Select</option>
+            <option value = "select" selected="selected">Valitse</option>
             <option value = "accurat">Accurat</option>
             <option value = "agilent">Agilent</option>
             <option value = "circuitmate">Circuitmate</option>
@@ -162,7 +162,7 @@
   <form method = "post" action = "/product">
       <label for="product"><b>Product</b></label>
           <select name = "product" id = "product">
-            <option value = "select" selected="selected">Select</option>
+            <option value = "select" selected="selected">Valitse</option>
             <option value = "move">Move</option>
             <option value = "care">Care</option>
             <option value = "fido">Fido</option>

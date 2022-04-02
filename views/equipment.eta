@@ -1,42 +1,90 @@
 <% layout("./layouts.eta") %>
 
-<div id="laite" class="tabcontent">
+<!--<div id="laite" class="tabcontent">-->
 
-<form action = "/" method = "get">
-    <input type = "submit" value = "takaisin" id="back">
-</form>
 
 
 <h3>Vivago Laiterekisteri</h3>
-<h3><a href = "/createEq">Uusi tietue</a></h3>
+<h3><a href = "/createEq"><button>Uusi tietue</button></a></h3>
+<form action = "/getSelected" method = "post">
+    <input type = "text" id = "search" name = "searchText"/>
+    <input type = "submit" value = "Hae" id="searchButton">
+</form>
 
 <table>
         <tr>
-            <th>X</th><th>Equipment Id</th>
-            <th>Equipment Description</th>
-            <th>Model</th>
-            <th>Serial nro</th>
-            <th>Status</th>                        
-            <th>Manufacture</th>
-            <th>Location</th>        
-            
-
-            <th>Used by</th>
+            <th>Poista</th>
+            <th>Muokkaa</th>
+            <th>ID</th>
+            <th>Kuvaus</th>
+            <th>Tuote</th>
+            <th>Status</th>            
+            <th>Ostaja</th>                        
+            <th>Ostopvm</th>
+            <th>Toimittaja</th>
+            <th>Kalibroitu</th> 
+            <th>Ylläpitotarve</th>
+            <th>Validaatiotarve</th>         
+            <th>Osasto</th>
         </tr>
 
-<% it.equipments.forEach((h) =>{%>
+
+<% console.log("equipment.eta") %>
+
+<% it.equipments.forEach((h) =>{ %>    
+    <% var i = 0 %>
+    
+        <% if (h[3] === null) { %>
+            <%= h[3] = '-'%>
+        <%}%>
+
+        <%if (h[8] === null) { %>
+            <%= h[8] = '-'%>
+        <%}%>
+
+        <% if (h[9] === "yes") { %>
+            <%= h[9] = 'Kyllä' %>
+        <% } else if (h[9] === "no") { %>
+            <%= h[9] = 'Ei'%>
+        <%}%>
+
+        <% if (h[10] === "yes") { %>
+            <%= h[10] = 'Kyllä' %>
+        <% } else if (h[10] === "no") { %>
+            <%= h[10] = 'Ei'%>
+        <%}%>
+
+        <% if (h[14] === "yes") { %>
+            <%= h[14] = 'Kyllä' %>
+        <% } else if (h[14] === "no") { %>
+            <%= h[14] = 'Ei'%>
+        <%}%>
+
+
+        <% console.log("Equipment kenttien indeksointi") %>
+        <% h.forEach((r)=>{ %>
+            <% console.log(i, r)%>
+            <% i++ %>
+        <%})%>
+
+        <% i++ %>
+
     <tr>
-        <td><a href = "/startremoval/<%= h[11] %>">X</a></td>
-        <td><a href = "/editEq/<%= h[11] %>"><%= h[11] %></a></td>        
-        <td><%= h[12] %></td>
-        <td><%= h[6] %></td>
-        <td><%= h[7] %></td>
-        <td><%= h[4] %></td> 
-        <td><%= h[5] %></td>
-        <td><%= h[8] %></td> 
-        <td><%= h[9] %></td> 
+        <td><a href = "/startremoval/<%= h[0] %>">X</a></td>
+        <td><a href = "/editEq/<%= h[0] %>"><%= h[0] %></a></td>        
+        <td><%= h[1] %></td> <%/* equipment id */%>
+        <td><%= h[2] %></td> <%/* equipment desc */%>
+        <td><%= h[5] %></td> <%/* product */%>
+        <td><%= h[3] %></td> <%/* status */%>
+        <td><%= h[6] %></td> <%/*purchaseby*/%>
+        <td><%= h[7] %></td> <%/*purchasedate */%>
+        <td><%= h[8] %></td> <%/* supplier */%>
+        <td><%= h[9] %></td> <%/* calibrated */%>
+        <td><%= h[10] %></td> <%/* maintenanceneed */%>
+        <td><%= h[14] %></td> <%/* validationneed*/%>
+        <td><%= h[4] %></td> <%/* usedby*/%>
     </tr>
 <%}); %>
 
 </table>
-</div>
+<!--</div>-->

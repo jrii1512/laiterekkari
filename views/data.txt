@@ -1,0 +1,20 @@
+              if (h[8] === "move") {             
+            document.getElementsById("product").value = "Move"
+           } else if (h[8] === "care") { 
+            document.getElementsById("product").value = "Care"
+           } else if (h[8] === "fido") { 
+            document.getElementsById("product").value = "Fido"
+           } else if (h[8] === "pointethernet") { 
+            document.getElementsById("product").value = "Pointethernet"
+           } else if (h[8] === "pointgsm") { 
+            document.getElementsById("product").value = "Pointgsm"
+           } else if (h[8] === "laitelDI-2") { 
+            document.getElementsById("product").value = "DI-I-2"
+           } else if (h[8] === "laitelDI-2-B") { 
+            document.getElementsById("product").value = "DI-I-2-B"
+           } else if (h[8] === "locate") { 
+            document.getElementsById("product").value = "Locate"
+           } else if (h[8] === "sw") { 
+            document.getElementsById("product").value = "SW"
+           } else if (h[8] === "setup") { 
+            document.getElementsById("product").value = "Setup"

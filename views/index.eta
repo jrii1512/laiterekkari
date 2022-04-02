@@ -1,8 +1,65 @@
 <% layout("./layouts.eta") %>
 
-<% console.log("index.eta (response from the itemController -> " + it.deleteResp) %>
-<% console.log("index.eta (response from the itemController -> " + it.deleteResp) %>
 
-<h3><%= it.deleteResp %></h3>
+<div id = "main">    
+    <h3><% it.mainpage %></h3>
 
+    <table>
+        <tr>
+            <th>Done</th>
+        </tr>
+        <tr>
+            <td>
+                <ol>
+                
+                    <li>Relaatio taulut</li>
+                    <li>Recordin syöttö</li>
+                    <li>Kaikkien laitteiden haku (relaatio kytkös)</li>
+                    <li>Haku description kentän perusteella</li>
+                    <li>Editointi</li>
+                    <li>Poisto</li>
+                    <li>Datan haku keywordeillä</li>
+                    <li>Formien validointi</li>
+                </ol>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Todo</th>
+        </tr>
+        <tr>            
+        <td>
+            <ol>
+                <li>Populointi oikealla datalla</li>
+                <li>Alarm functionality.</li>
+                <li>Unit testit</li>
+            </ol>
+        </td>
+        </tr>
+    </table>
+
+    <table>
+        <th>Bugit</th><th>Korjattu</th>
+        <tr>
+            <td>
+                <ol>
+                    
+                    <li>In edit form calduedate, lastcaldate and lastvalidationdate (date) fields not working.</li>
+                </ol>
+            </td>
+
+            <td>
+                <ol>                    
+                    <li>Product update working</li>
+                    <li>Cannot change select element values in eta, document is not known.</li>
+                </ol>
+            </td>
+
+    </table>
+    <h3></h3>
+
+
+</div>
 

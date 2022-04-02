@@ -6,24 +6,15 @@ const router = new Router();
 //adding equipment
 router.post('/register', item.register);
 
-router.get('/startremoval/:equipmentid', item.removeRec);
-//router.post('/delete/:equipmentid', item.deleteRec);
+router.get('/startremoval/:eid', item.removeRec);
 
-router.get('/', item.getEquipments);
-
-router.get('/newRecord', item.gotoNewRecord);
-router.get('/other', item.getOther);
-router.get('/products', item.getProducts);
+router.get('/', item.showMain);
+router.get('/getData', item.getData);
+router.post('/getSelected', item.getSelected);
 router.get('/createEq', item.createEq);
-router.get('/editEq/:equipmentid', item.editEq);
-router.post('/update/:equipmentid/:equipmentDesc/:category/:categoryDesc/:number/:oldid/:status/:manufacture/:model/:serialnro/:location/:useby', item.updaterec);
-/*
-router.get('/calibrations', item.getCalibrations);
-*/
-/*
-router.post('/other', item.register);
-router.post('/product', item.getDevices);
-router.post('/calibration', item.register);
-*/
+router.get('/editEq/:eid', item.editEq);
+router.post('/update', item.updaterec);
+router.post('/register', item.register);
+
 
 export default router.routes();

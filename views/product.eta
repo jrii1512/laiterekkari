@@ -1,9 +1,5 @@
 <% layout("./layouts.eta") %>
 
-<form action = "/" method = "get">
-    <input type = "submit" value = "takaisin" id="back">
-</form>
-
 <h3>Vivago Laiterekisteri</h3>
 <table>
         <tr>

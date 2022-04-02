@@ -1,0 +1,30 @@
+Laiterekkari bugit:
+
+- Tarkasta kenttä used by
+- 
+
+<script type = "text/javascript" src = "populateSelect.js">
+
+Uusi recordi:
+-------------
+- Uuden recordin luominen ok eli tulee vain yksi ilmentymä.
+- Editointi toimii (poislukien usedby kentän arvoja).
+- Toisen recordin luominen aiheuttaa duplikaatit jo olemassa olevaan recordiin ja uuteen ... ? 
+Recordin ilmentymiä siis 4.
+- Poistamalla ensimmäisen recordin jäljelle jää vain yksi eli uusi recordi kuten pitääkin.
+
+
+SELECT DISTINCT "equip".eid, "equip".equipmentid, "equip".equipmentdesc, "equip".oldid, "equip".status, 
+"equip".specification, "equip".notes, "equip".usedby, "prod".product, "purch".purchaseby, "purch".purchasedate, 
+"purch".supplier, "purch".supplierid, "purch".manufacture, "purch".model, "purch".serialnro, "purch".location, 
+"calib".calduedate, "calib".lastcaldate, "calib".calintervalyears, "calib".calibrationcert, "calib".applied, 
+"maint".maintneed, "maint".maintinstruction,"valid".validationneed, "valid".lastvalidationdate, 
+"valid".validationreport 
+FROM "equip" 
+JOIN "prod" ON "equip".eid = "prod".equipid 
+JOIN "calib" ON "equip".eid = "calib".equipid 
+JOIN "purch" ON "equip".eid = "purch".equipid 
+JOIN "maint" ON "equip".eid = "maint".equipid 
+JOIN "valid" ON "equip".eid = "calib".equipid WHERE "eid" = ($1) ORDER BY "equip".eid DESC
+
+<% /*<input type = "text" name = "calapplied" value = "<%= h[21] %>">*/ %>
