@@ -1,0 +1,25 @@
+
+Laiterekisteri havainnot, 6-4-2022
+Paikalla: Jouni Riimala, Marko Myllymäki
+
+
+Laitelista näkymä:
+
+	Muutokset kenttiin ?
+		- Tarvitaanko ylläpitotarvetta laitenäkymässä?
+		- Tarvitaanko osastoa laitenäkymässä?
+
+	Create form
+		-
+
+	Edit form
+		-
+		
+Alert toiminnallisuus
+	- Nykyinen hälytys indikointi väreillä ja päivillä. Hälytys perustuu kalibration due dateen eli onko tämä riittävä?
+	
+Muuta
+	- 
+	
+
+

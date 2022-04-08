@@ -1,15 +1,18 @@
 <% layout("./layouts.eta") %>
 
 <!--<div id="laite" class="tabcontent">-->
-
+<head>
+    <style>
+    </style>
+</head>
 
 
 <h3>Vivago Laiterekisteri</h3>
-<h3><a href = "/createEq"><button>Uusi tietue</button></a></h3>
 <form action = "/getSelected" method = "post">
-    <input type = "text" id = "search" name = "searchText"/>
+    <input type = "text" id = "search" name = "searchText" placeholder = "Haku sisällön perusteella"/>
     <input type = "submit" value = "Hae" id="searchButton">
 </form>
+<p>
 
 <table>
         <tr>
@@ -17,88 +20,90 @@
             <th>Muokkaa</th>
             <th>ID</th>
             <th>Kuvaus</th>
-            <th>Tuote</th>
-            <th>Status</th>            
-            <th>Ostaja</th>                        
-            <th>Ostopvm</th>
+            <th><a href ="/getData/product">Tuote</a></th>
+            <th><a href ="/getData/status">Status</a></th>            
+            <th><a href ="/getData/ostaja">Ostaja</a></th>                        
+            <th><a href ="/getData/ostopvm">Ostopvm</a></th>
             <th>Toimittaja</th>
             <th>Kalibroitu</th> 
+            <th>Aikaa kalibrointiin</th>
+            <th>Kalibrointi Hälytys</th>
             <th>Ylläpitotarve</th>
             <th>Validaatiotarve</th>         
-            <th>Osasto</th>
+            <th><a href ="/getData/'osasto'">Osasto</a></th>
         </tr>
 
 
 <% console.log("equipment.eta") %>
 
+
+<% if (it.dub) {%>
+    <% document.getElementById('eqid').value = it.dub %>
+<%}%>
+
 <% it.equipments.forEach((h) =>{ %>    
     <% var i = 0 %>
+    <% var alertFlag = "" %>
+    <% console.log("h-data:\n") %>
+    <% console.log(i, h) %>
     
-        <% if (h[3] === null) { %>
-            <% h[3] = '-'%>
-        <%} else if (h[3] === 'ei aktiivinen') {%>
-        <% h[3] = 'Ei aktiivinen' %>
-        <%}%>
-
-        <%if (h[8] === null) { %>
-            <% h[8] = '-'%>
-        <%}%>
-
-        <% if (h[5] === "ei") { %>
-            <% h[5] = 'Ei' %>
-        <% } else if (h[5] === "kyllä") { %>
-            <% h[5] = 'Kyllä'%>
-        <%}%>
-
-        <% if (h[5] === "ei") { %>
-            <% h[5] = 'Ei' %>
-        <% } else if (h[5] === "kyllä") { %>
-            <% h[5] = 'Kyllä'%>
-        <%}%>
-
-
-        <% if (h[9] === "yes") { %>
-            <% h[9] = 'Kyllä' %>
-        <% } else if (h[9] === "no") { %>
-            <% h[9] = 'Ei'%>
-        <%}%>
-
-        <% if (h[10] === "yes") { %>
-            <% h[10] = 'Kyllä' %>
-        <% } else { %>
-            <% h[10] = 'Ei'%>
-        <%}%>
-
-        <% if (h[14] === "yes") { %>
-            <% h[14] = 'Kyllä' %>
-        <% } else if (h[14] === "no") { %>
-            <% h[14] = 'Ei'%>
-        <%}%>
-
-
-        <% console.log("Equipment kenttien indeksointi") %>
-        <% h.forEach((r)=>{ %>
-            <% console.log(i, r)%> 
-            <% i++ %>
-        <%})%>
-
-        <% i++ %>
+    <% console.log("Equipment kenttien indeksointi") %>
+    <% h.forEach((r)=>{ %>
+        <% console.log(i, r)%> 
+        <% i++ %>                    
+    <%})%>
 
     <tr>
         <td><a href = "/startremoval/<%= h[0] %>">X</a></td>
         <td><a href = "/editEq/<%= h[0] %>"><%= h[0] %></a></td>        
-        <td><%= h[1] %></td> <%/* equipment id */%>
-        <td><%= h[2] %></td> <%/* equipment desc */%>
+        <td id = "eqid"><%= h[1] %></td> <%/* equipment id */%>
+        <td><%= h[2] %></td> <%/* equ0ipment desc */%>
+        
         <td><%= h[5] %></td> <%/* product */%>
+        
         <td><%= h[3] %></td> <%/* status */%>
         <td><%= h[6] %></td> <%/* purchaseby*/%>
         <td><%= h[7] %></td> <%/* purchasedate */%>
         <td><%= h[8] %></td> <%/* supplier */%>
         <td><%= h[9] %></td> <%/* calibrated */%>
+
+        <% if (h[12] === "1971-01-01") {%>
+        <% console.log("h[12] = 1971-01-01")%>
+            <% h[12] = "-" %> <%/* kalibrointi mennessä */%>            
+            <% h[17] = "-" %> <%/* Alert kenttä */%>
+            <td><%= h[12] %></td>
+            <td><%= h[17] %></td>
+            
+            <%} else {%>
+                <td><%= h[12] %></td> <%/* calibrate due date */%>                 
+                    <% console.log("h12: ", h[12]); %>
+                    <% console.log("h16: ", h[16]); %>
+                    <% console.log("diff: ", h[17]); %>
+                
+                <% if (h[12] === "-" || h[12] === "1971-01-01"){%>                    
+                    <%=h[17] = "-"%>
+                    <td><%=h[17]%></td>
+                <%}%>
+            
+                <% if (h[17] < 0) {%>                    
+                    <td style = "background-color:green"><%= h[17] %> päivää aikaa</td>
+                <%} else if (h[17] > 0 && h[17] < 10) {%>
+                    <td style = "background-color:orange">Kalilbrointi myöhästynyt<br><%= h[17] %> päivää. </td>                      
+                <%} else if (h[17] > 10) { %>
+                    <td style = "background-color:red">Kalilbrointia ei tehty <br><%= h[17] %> päivään. </td>
+                <%} else if (h[17] > 1000) { %>
+                    <td>-</td>
+                <%}%>                
+            <%}%>   
+                
         <td><%= h[10] %></td> <%/* maintenanceneed */%>
         <td><%= h[14] %></td> <%/* validationneed*/%>
         <td><%= h[4] %></td> <%/* usedby*/%>
+        
     </tr>
+
+
+
 <%}); %>
 
 </table>

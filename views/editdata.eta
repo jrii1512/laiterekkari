@@ -93,15 +93,26 @@
           <p>
 
         <label for="status"><b>Status</b></label>
-          <input type = "text" value = "<%= h[4] %>">
+          <select name = "status" name = "status">
+          <option value = "<%= h[4] %>" selected="selected"><%= h[4] %></option>
+            <option value = "Active" >Aktiivinen</option>
+            <option value = "Ei aktiivinen" selected="selected">Ei aktiivinen</option>
+        </select>
         <p>
 
         <label for="specification"><b>Specsin sijainti</b></label>
-          <input type = "text" value = "<%= h[5] %>">
-          <p>
+        <% if (!h[5]) {%>
+          <%= h[5] = "-"%>
+        <%}%>  
+        <input type = "text" value = "<%= h[5] %>">
+        <p>
 
         <label for="notes"><b>Muistiinpanot</b></label>
+        <% if (!h[6]) {%>
           <textarea rows = "6" cols = "30" name =  "notes"><%= h[6] %></textarea>
+        <%} else {%>  
+          <textarea rows = "6" cols = "30" name =  "notes">-</textarea>
+        <%}%>  
           <p>
         <label for="use"><b>Käyttäjä</b></label>
           <input type = "text" name = "use" name =  "use" value = "<%= h[7] %>">
@@ -118,7 +129,7 @@
         <% /*<input type = "hidden" name = "product" name =  "product" value = "<%= h[8] %>"> */ %>
         
         <label for="product" ><b>Tuote</b></label>
-           <select name = "product" name = "product" <% /* onload = "product" */ %> >
+           <select name = "product" name = "product" multiple="multiple" >
             <option value = "<%= h[8] %>" selected="selected"><%= h[8] %></option>
             <option value = "Move">MOVE</option>
             <option value = "Care">CARE</option>
@@ -228,7 +239,11 @@
         <p>
 
         <label for="maintenanceinstruction"><b>Ylläpito-ohje</b></label>
+        <% if (!h[23]) {%>
           <textarea rows="6" cols="30" name = "maintenanceinstruction">"<%= h[23] %>"</textarea>
+        <%} else {%>
+          <textarea rows="6" cols="30" name = "maintenanceinstruction">-</textarea>
+        <%}%>  
         <p>
   </div>
 
@@ -242,12 +257,21 @@
 
         <p>
 
-        <label for="lastValidationDate"><b>Validointi,<br>mennessä</b></label>
+        <label for="lastValidationDate"><b>Validoitu</label>
+        <% console.log(h[25])%>
+        <% if (h[25] === "1971-01-01") {%>
+            <input type = "date" name = "lastValidationDate" value = "">
+        <%} else {%>    
           <input type = "date" name = "lastValidationDate" value = "<%=h[25]%>">
+        <%}%>  
         <p>
 
         <label for="validationreport"><b>Validointi<br>raportti</b></label>
+        <% if (!h[26] || h[26]==='Ei'){%>
+          <textarea rows="6" cols = "30" name = "validationreport">-</textarea>
+        <%} else {%>  
           <textarea rows="6" cols = "30" name = "validationreport"><%= h[26] %></textarea>
+        <%}%>  
         <p>
 
     </div>

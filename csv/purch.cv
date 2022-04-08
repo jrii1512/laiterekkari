@@ -1,0 +1,4 @@
+purchid;purchaseby;purchasedate;supplier;supplierid;manufacture;model;serialnro;location;equipid
+63;Herra x;2022-04-01;ML;-;ei;Testi malli;12345;Tuusula;83
+62;Herra x;2022-04-01;ML;-;ei;Testi malli;12345;Tuusula;82
+61;Herra x;2022-04-01;;;ei;Testi malli;12345;Tuusula;80

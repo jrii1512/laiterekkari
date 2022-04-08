@@ -1,0 +1,35 @@
+<% layout("./layouts.eta") %>
+
+<div id = "main">    
+    <h3><% it %></h3>
+
+<h3>Perustoiminnallisuus</h3>
+    <table>
+        <th>Toiminnallisuus</th><th>Merkitys</th>
+        <tr>
+            <td>Järjestäminen otsikon mukaan</td><td>Klikkaa otsikkoa jossa linkki, oletus järjestykseen klikkaamalla hae laitetiedot.</td>
+        </tr>            
+        <tr>
+            <td>Haku sisällön perusteella</td><td>Voit hakea tekstikenttien sisältöjä hakemalla tekstikentässä olevia arvoja.<br>Päivmäärä kenttiä ei ole tuettu.</td>
+        </tr>
+    </table>    
+
+<P>
+<h3>Kalibrointi päivä indikaattori</h3>
+
+    <table>
+        <th>Hälytysten värikoodaus</th><th>Merkitys</th>
+        <tr>Mikäli luku on negatiivinen niin kalibrointiin on aikaa ks:n luvun indikoima määrä päiviä.</tr>
+        <tr>
+            <td style="background-color:green"></td><td>Kalibrointiin aikaa.</td>
+        </tr>            
+        <tr>
+            <td style="background-color:orange"></td><td>Kalibrointi myöhässä (alle kk).</td>
+        </tr>
+        <tr>    
+            <td style="background-color:red"></td><td>Kalibrointi myöhästynyt yli kk:n.</td>            
+        </tr>
+    </table>    
+
+</div>
+

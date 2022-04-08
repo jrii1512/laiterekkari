@@ -4,25 +4,39 @@
 <div id = "main">    
     <h3><% it.mainpage %></h3>
 
+
+
+
     <table>
-        <tr>
-            <th>Done</th>
-        </tr>
+        <th>Viimeisimmät Bugit</th><th>Korjatut</th>
         <tr>
             <td>
-                <ol>
-                
-                    <li>Relaatio taulut</li>
-                    <li>Recordin syöttö</li>
-                    <li>Kaikkien laitteiden haku (relaatio kytkös)</li>
-                    <li>Haku description kentän perusteella</li>
-                    <li>Editointi</li>
-                    <li>Poisto</li>
-                    <li>Datan haku keywordeillä</li>
-                    <li>Formien validointi</li>
+                <ol>                    
+                    
+                    <li>Laitelista näkymä:</li>                    
+                    <li>KL: Otsikkoihin perustuva filteröinti olisi hyvä.</li>                                 
                 </ol>
             </td>
-        </tr>
+
+            <td>
+                <ol>                    
+                    <li>KL: Mikäli kalibrointia mennessä ei ole asetettu niin ”alert” dataa ei tarvita.</li>
+                    <li>KL: Selkeämpi otsikointi osille kenttää etenkin ”alert” kolumnille.</li> 
+                    <li>KL: ”Taulukon väritys + alert indikaattorien väritys.</li>
+                    <li>Haettaessa keywordin perusteella, pitää varmistaa tietojen päätyminen oikeaan kolumniin</li>
+                    <li>Possible to select multiple product values</li>
+                    <li>Product update working</li>
+                    <li>Date arvon default arvon asetus tyhjäksi.</li>
+                    <li>Cannot change select element values in eta, document is not known.</li>
+                    <li>Tämän päivän ja kalibration mennessä päivämäärän erotuksen tulostus per rivi.</li>
+                    <li>Alertiksi merkityn recordin css määritys ei toimi.</li>
+                    <li>KL: Tarkista ”alert” logarithmi oikein eli onko ok, että negatiivinen tarkoittaa päiviä jäljellä.</li>
+                        <ul><li>Soluun lisätty informaatiota epäselvyyksien välttämiseksi. Ohje sivusto myös lisätty.</li></ul>
+                    <li>KL: Tabulaattorilla siirtyminen puuttuu</li>       
+
+                </ol>
+            </td>
+
     </table>
 
     <table>
@@ -32,8 +46,8 @@
         <tr>            
         <td>
             <ol>
+                <li>Alert toiminnallisuuden laajentaminen validation due dateen</li>
                 <li>Populointi oikealla datalla</li>
-                <li>Alarm functionality.</li>
                 <li>Unit testit</li>
             </ol>
         </td>
@@ -41,23 +55,27 @@
     </table>
 
     <table>
-        <th>Bugit</th><th>Korjattu</th>
+        <tr>
+            <th>Done</th>
+        </tr>
         <tr>
             <td>
                 <ol>
-                    
-                    <li>In edit form calduedate, lastcaldate and lastvalidationdate (date) fields not working.</li>
+                    <li>Relaatio taulut</li>
+                    <li>Recordin syöttö</li>
+                    <li>Kaikkien laitteiden haku (relaatio kytkös)</li>
+                    <li>Haku description kentän perusteella</li>
+                    <li>Editointi</li>
+                    <li>Poisto</li>
+                    <li>Datan haku keywordeillä</li>
+                    <li>Formien validointi</li>
+                    <li>Alarm suhteessa kalibroinnin due dateen.</li>
                 </ol>
             </td>
-
-            <td>
-                <ol>                    
-                    <li>Product update working</li>
-                    <li>Cannot change select element values in eta, document is not known.</li>
-                </ol>
-            </td>
-
+        </tr>
     </table>
+
+
     <h3></h3>
 
 

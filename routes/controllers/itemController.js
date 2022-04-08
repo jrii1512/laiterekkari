@@ -18,15 +18,19 @@ var log = [];
 var imageFilePath = '';
 debugger;
 
+
 const showMain = async ({ response }) => {
+    try{
     console.log('Main page called');
     response.body = await renderFile('../views/index.eta', {
         mainpage: "Vivagon laiterekisteri"
     });
-};
+}catch (error){
+    console.error(error)
+}
+}
 
-
-const getSelected  = async ({ request, response }) => {
+const getSelected = async ({ request, response }) => {
     console.log('Datan haku');
     const body = request.body();
     const formData = await body.value;
@@ -39,12 +43,13 @@ const getSelected  = async ({ request, response }) => {
     });
 }
 
-const getData = async ({ request, response}) => {
+const getData = async ({ response, params }) => {
+    const sorter = params;
+    console.log("controller, getData, sorter = ", sorter)
     response.body = await renderFile('../views/equipment.eta', {
-        equipments: await itemServices.getAllData(),
+        equipments: await itemServices.getAllData(sorter),
     });
 };
-
 
 const removeRec = async ({ response, params }) => {
     console.log("controller, getRemoveRec");
@@ -53,6 +58,18 @@ const removeRec = async ({ response, params }) => {
     console.log("controller, eid: ", eid);
     await itemServices.deleteRecord(eid);
     response.redirect('/getData');
+}
+
+const checkDubId = async (equipmentid) => {
+    console.log("Controller -> checkDubId, equipmentid = ", equipmentid)
+    const dubCheck = await itemServices.checkDuplicate(equipmentid)
+    return dubCheck
+}
+
+const indicateDub = async ({ response }) => {
+    response.body = await renderFile('../views/test.eta', {
+        dub: "Duplicate id found",
+    });
 }
 
 const register = async ({ request, response }) => {
@@ -86,7 +103,19 @@ const register = async ({ request, response }) => {
         const location = formData.get('location');
 
         //Product
-        const product = formData.get('product');
+        let productAll = formData.getAll('product');
+
+        /*var selected = [...product].filter(option => option.selected).map(option => option.value);*/
+        let allProducts = ""
+        let product = ""
+        console.log("Multiple products: ")
+        productAll.forEach((p) => {
+            console.log("product:", p)
+            allProducts += p + ",";
+
+        })
+        product = allProducts.slice(0, -1);
+        console.log("Product to be sent: ", product)
 
         //Calibration
         const calduedate = formData.get('calduedate');
@@ -106,6 +135,14 @@ const register = async ({ request, response }) => {
 
         console.log('controller, manufacture', manufacture);
 
+        /*
+        console.log("Checking if equipment id already exist")
+        const dubEquipmentid = checkDubId(equipmentid)
+        if (dubEquipmentid === 'Kyllä'){
+            console.log("Duplicate found, indicate result")
+            indicateDub();
+        }
+        */
 
         await itemServices.addEquipment(
             //Equipment taulu
@@ -184,9 +221,14 @@ const gotoNewRecord = async ({ response }) => {
     response.body = await renderFile('../views/newRecord.eta');
 }
 
+const showGuide = async ({ response }) => {
+    console.log("Ohje buttonia klikattu");
+    response.body = await renderFile('../views/help.eta');
+}
+
 const createEq = async ({ response }) => {
     console.log("createEq klikattu");
-    response.body = await renderFile('../views/createEq.eta');    
+    response.body = await renderFile('../views/createEq.eta');
 }
 
 const editEq = async ({ response, params }) => {
@@ -196,8 +238,8 @@ const editEq = async ({ response, params }) => {
     });
 }
 
-const updaterec = async ({ request, response}) => {
-    console.log("Recordin update klikattu.");    
+const updaterec = async ({ request, response }) => {
+    console.log("Recordin update klikattu.");
 
     console.log('Luetaan kenttien tiedot');
     const body = request.body();
@@ -222,18 +264,33 @@ const updaterec = async ({ request, response}) => {
     //Purhcase
     const purchaseby = formData.get('purchaseby');
     const purchasedate = formData.get('purchasedate');
-    const supplier = formData.get('supplier');
+    let supplier = formData.get('supplier');
     const supplierid = formData.get('supplierid');
     const manufacture = formData.get('manufacture');
     const model = formData.get('model');
     const serialnro = formData.get('serialnro');
     const location = formData.get('location');
 
+    //Exceptions:
+    if (!supplier || supplier === "") {
+        supplier = "-"
+    }
+
     //Product
-    const product = formData.get('product');
-    console.log("product: ", product);
-    //const product2 = document.getElementsByName("product").value
-    //console.log("product2: ", product2)
+    let productAll = formData.getAll('product');
+
+    /*var selected = [...product].filter(option => option.selected).map(option => option.value);*/
+    let allProducts = ""
+    let product = ""
+    console.log("Multiple products: ")
+    productAll.forEach((p) => {
+        console.log("product:", p)
+        allProducts += p + ",";
+
+    })
+    product = allProducts.slice(0, -1);
+    console.log("Product to be sent: ", product)
+
 
     //Calibration
     const calduedate = formData.get('calduedate');
@@ -247,8 +304,13 @@ const updaterec = async ({ request, response}) => {
     const maintenanceinstruction = formData.get('maintenanceinstruction');
 
     //Validation            
-    const validationneed = formData.get('validationneed');
-    const validationdate = formData.get('lastValidationDate');
+    let validationneed = formData.get('validationneed');
+
+    let validationdate = formData.get('lastValidationDate');
+    if (!validationdate) {
+        validationdate = "1971-01-01"
+    }
+
     const validationreport = formData.get('validationreport');
 
     console.log("controller, eid: ", eid);
@@ -282,7 +344,8 @@ const updaterec = async ({ request, response}) => {
         maintenanceinstruction,
         validationneed,
         validationdate,
-        validationreport
+        validationreport,
+        showGuide
     );
     response.redirect('/getData');
 }
@@ -300,5 +363,8 @@ export {
     updaterec,
     register,
     removeRec,
-    getSelected
+    getSelected,
+    checkDubId,
+    indicateDub,
+    showGuide
 };

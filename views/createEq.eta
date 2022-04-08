@@ -96,46 +96,46 @@ const today = () => {
         -->        
 
         <label for="oldid"><b>Vanha id</b></label>
-          <input type = "text" name = "oldid" value = "-">
+          <input type = "text" name = "oldid" value = "-" tabindex = "1">
           <p>
 
         <label for="prefix"><b>Etuliite</b></label>
-          <input type = "text" name = "prefix" id = "pre" placeholder = "pakollinen" required>
+          <input type = "text" name = "prefix" id = "pre" placeholder = "pakollinen" tabindex = "2" required>
         <p>
 
         <label for="category"><b>Kategoria</b></label>
-          <input type = "text" name = "category" id = "cat" onclick = "today()" placeholder = "pakollinen" required>
+          <input type = "text" name = "category" id = "cat" onclick = "today()" tabindex = "3" placeholder = "pakollinen" required>
           <p>
 
         <label for="categorydesc"><b>Kategorian kuvaus</b></label>
-          <input type = "text" name = "categorydesc" id = "catdesc">
+          <input type = "text" name = "categorydesc" id = "catdesc" tabindex = "4">
           <p>
 
         <label for="number"><b>Numero</b></label>
-          <input type = "text" name = "number" id = "num" placeholder = "pakollinen" required>                    
+          <input type = "text" name = "number" id = "num" tabindex = "5" placeholder = "pakollinen" required>                    
           <p>
 
-        <label for="equipmentid"><b>Laite id</b></label>
-          <input type = "text" name = "equipmentid" id = "eqid"  onclick = "createEquipmentID()" >           
+        <label for="equipmentid"><b>Id</b></label>
+          <input type = "text" name = "equipmentid" id = "eqid"  onclick = "createEquipmentID()" tabindex = "6" placeholder = "Täytä prefix, category ja numero." >           
         <p>
 
         <label for="equipmentDesc"><b>Laitteen<br>kuvaus</b></label>
-          <input type = "text" name = "equipmentdesc" id = "eqdesc" placeholder = "pakollinen" required>
+          <input type = "text" name = "equipmentdesc" id = "eqdesc" tabindex = "7" placeholder = "pakollinen" required>
         <p>
 
         <label for="status"><b>Status</b></label>
-          <select name = "status" name = "status">
+          <select name = "status" name = "status" tabindex = "8">
             <option value = "Active" >Aktiivinen</option>
             <option value = "Ei aktiivinen" selected="selected">Ei aktiivinen</option>
           </select>
         <p>
         
         <label for="specification"><b>Dokumentti</b></label>
-          <input type = "text" name = "specification" value = "-">
+          <input type = "text" name = "specification" value = "-" tabindex = "9">
         <p>
 
         <label for="Eites"><b>MuistiinpaEit</b></label>
-          <textarea rows = "6" cols = "30" name = "Eites">Ei</textarea>
+          <textarea rows = "6" cols = "30" name = "Eites" tabindex = "10">Ei</textarea>
         <p>
 </div>
 
@@ -144,23 +144,23 @@ const today = () => {
   <div class = "column middle">
 
         <label for="purchaseby"><b>Ostaja</b></label>
-          <input type = "text" name = "purchaseby" id = "purchaseby" placeholder = "pakollinen" required>
+          <input type = "text" name = "purchaseby" id = "purchaseby" tabindex = "11" placeholder = "pakollinen" required>
         <p>
 
         <label for="purchasedate"><b>Ostettu</b></label>
-          <input type = "date" name = "purchasedate" id = "purchdate">
+          <input type = "date" name = "purchasedate" id = "purchdate" tabindex = "12">
         <p>
 
         <label for="supplier"><b>Toimittaja</b></label>
-          <input type = "text" name = "supplier" id = "supplier" placeholder = "pakollinen" required>
+          <input type = "text" name = "supplier" id = "supplier" tabindex = "13" placeholder = "pakollinen" required>
         <p>
 
         <label for="supplierid"><b>Toimittajan id</b></label>
-          <input type = "text" name = "supplierid" value = "-">
+          <input type = "text" name = "supplierid" value = "-" tabindex = "14">
         <p>
 
         <label for="manufacture"><b>Valmistaja</b></label>
-           <select name = "manufacture" name = "manufacture" id = "mfact" placeholder = "pakollinen" required>
+           <select name = "manufacture" name = "manufacture" id = "selMan" tabindex = "15" placeholder = "pakollinen" required>
             <option value = "Ei" selected="selected">Ei valittu</option>
             <option value = "Accurat">Accurat</option>
             <option value = "Agilent">Agilent</option>
@@ -191,21 +191,21 @@ const today = () => {
           </select>
         <p>
 
-        <label for="model"><b>Malli</b></label placeholder = "pakollinen" required>
+        <label for="model"><b>Malli</b></label tabindex = "16" placeholder = "pakollinen" required>
           <input type = "text" name = "model" id = "model">
         <p>
 
         <label for="serialnro"><b>Sarja nro</b></label>
-          <input type = "text" name = "serialnro" id = "serialnro" placeholder = "pakollinen" required>
+          <input type = "text" name = "serialnro" id = "serialnro" tabindex = "17" placeholder = "pakollinen" required>
         <p>
 
         <label for="location"><b>Valmistus<br>paikka</b></label>
-          <input type = "text" name = "location"  id = "manlocation">
+          <input type = "text" name = "location"  id = "manlocation" tabindex = "18">
         <p>
 
 
         <label for="use"><b>Käyttäjä</b></label>
-          <input type = "text" name = "use" value = "Tuotekehitys" >
+          <input type = "text" name = "use" value = "Tuotekehitys" tabindex = "19" >
         <p>
   </div>
 
@@ -213,7 +213,7 @@ const today = () => {
 <!-- Product, maintenance and validation tables-->
   <div class = "column right">
         <label for="product"><b>Tuote</b></label>
-           <select name = "product" name = "product">
+           <select name = "product" name = "product" id = "selNorm" multiple="multiple" tabindex = "20">
             <option value = "Ei" selected="selected">Ei tuotetta</option>
             <option value = "Move">MOVE</option>
             <option value = "Care">CARE</option>
@@ -229,29 +229,29 @@ const today = () => {
         <p>
 
         <label for="maintenanceneed"><b>Ylläpitotarve</b></label>
-          <select name = "maintenanceneed">
+          <select name = "maintenanceneed" id = "selMain" tabindex = "21">
             <option value = "Kyllä" selected="selected">Kyllä</option>
             <option value = "Ei">Ei</option>
           </select>  
         <p>
 
         <label for="maintenancEinstruction"><b>Ylläpito-ohje</b></label>
-          <textarea rows = "6" cols = "30" name = "maintenancEinstruction">Ei</textarea>
+          <textarea rows = "6" cols = "30" name = "maintenancEinstruction" tabindex = "22">Ei</textarea>
         <p>
 
         <label for="validationneed"><b>Validointi tarve</b></label>
-          <select name = "validationneed">
+          <select name = "validationneed" tabindex = "23">
             <option value = "Kyllä" selected="selected">Kyllä</option>
             <option value = "Ei">Ei</option>
           </select>  
         <p>
 
         <label for="validationdate"><b>Validointi päivä</b></label>
-          <input type = "date" name = "validationdate" >
+          <input type = "date" name = "validationdate" tabindex = "24">
         <p>
 
         <label for="validationreport"><b>Validaatio raportti</b></label>
-          <textarea rows = "6" cols = "30" name = "validationreport">Ei</textarea>
+          <textarea rows = "6" cols = "30" name = "validationreport" tabindex = "25">Ei</textarea>
         <p>
   </div>
 
@@ -259,7 +259,7 @@ const today = () => {
   <div class = "column farest">
 
         <label for="calapplied"><b>Kalibroitu</b>
-          <select name = "calapplied">
+          <select name = "calapplied" id = "selKalib" tabindex = "26">
             <option value = "Ei" selected="selected">Ei</option>
             <option value = "Kyllä">Kyllä</option>
             
@@ -267,20 +267,20 @@ const today = () => {
         <p>
         
         <label for="calintervalyears"><b>Kalibrointi väli</b></label>
-          <input type = "number" name = "calintervalyears" class = "calInput" value = 0>
+          <input type = "number" name = "calintervalyears" class = "calInput" value = 0 tabindex = "27">
         <p>
 
         <label for="calduedate"><b>Kalibrointi mennessä</b></label>
-          <input type = "date" name = "calduedate" class = "calDate">
+          <input type = "date" name = "calduedate" class = "calDate" tabindex = "28">
         <p>
 
         <label for="lastcaldate"><b>Kalibroitu (date)</b></label>
-          <input type = "date" name = "lastcaldate" class = "calDate">
+          <input type = "date" name = "lastcaldate" class = "calDate" tabindex = "29">
         <p>
 
 
         <label for="calibrationcert"><b>Kalibroinnin sertifikaatti</b></label>
-          <input type = "calibrationcert" name = "calibrationcert" class = "calCert" value = "Ei sertifikaattia">
+          <input type = "calibrationcert" name = "calibrationcert" class = "calCert" tabindex = "30" value = "Ei sertifikaattia">
         <p>
   </div>
 
@@ -296,3 +296,5 @@ const today = () => {
     document.getElementById("eqid").value = document.getElementById("pre").value + "-" + document.getElementById("cat").value + "-" + document.getElementById("num").value;
   }  
 </script>  
+
+

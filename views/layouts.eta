@@ -10,9 +10,19 @@
 <title>Vivago Device Register</title>
 
 <style>
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  border-style:solid 1px;
+  border-color:red;
+  font-size: 12px;
+  font-style: bold;
+  color: red;
+  opacity: 1; /* Firefox */
+}
+
 .box{
     margin:auto;
-    background-color:#ccffb3;;
+    background-color:#ccffb3;
     border: 5px solid;
     border-radius: 10px;
     padding: 10px;
@@ -21,7 +31,6 @@
     height: 90%;
     align:center;
     }
-
 input#search{
   width:20%;
   height: 20px;
@@ -58,9 +67,37 @@ input#lastValidationDate{
   width:400px;
 }
 
-select{
-  width:fit-content;
+select#selNorm{
+  width:50%;
   height:50px;
+}
+
+select#selMaint{
+  width: 30% !important;
+}
+
+select#selMan{
+  width: 30% !important;
+}
+
+select#selKalib{
+  width: 80% !important;
+}
+
+#stillTime{
+font-style: bold;
+color: green;
+}
+
+#calibProblem{
+font-style: bold;
+color: red;
+}
+
+
+#timeOver{
+font-style: bold;
+color: orange;
 }
 
 .formi{
@@ -76,24 +113,32 @@ select{
   border-radius: 10px;
 }
 
+#alert{
+  background-color:red;
+}
+
 h3{
 color:black;
 }
 
 th{
- background-color:white;
+ background-color:gray;
  color:black;
 }
 
 table, td {
+background-color:white;
   border: 1px solid black;
   border-color:black;
   text-align:left;
-  background-color:#ccffb3;;
+  
   color: black;
   height:98%;
   font-size:18px;
 }
+
+tr:nth-child(even) {background-color: #d9d9d9;}
+
 th, td{
     padding: 5px 5px 5px 5px
 }
@@ -192,7 +237,7 @@ label{
     }
 
 input#eqid{
-  width:40%
+  width:55%;
 }
 
 div#huollot{
@@ -340,6 +385,7 @@ div#kuvat{
   <button><a href = "/">Pääsivu</a></button>
   <button><a href = "/createEq">Syötä dataa</a></button>
   <button><a href = "/getData">Hae laitetiedot</a></button>
+  <button><a href = "/guide">Ohje</a></button>
 
 
 </div>

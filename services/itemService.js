@@ -46,13 +46,13 @@ const getRecord = async (eid) => {
 
     rec.rows.forEach((e) => {
         var i = 0;
-        
+
         e[10] = modifyDateFormat(e[10])
         e[17] = modifyDateFormat(e[17])
         e[18] = modifyDateFormat(e[18])
         e[25] = modifyDateFormat(e[25])
 
-        console.log("purchdate (10): " +e[10]+ ", calduedate (17): " +e[17]+ ", lastcaldate (18): " +e[18]+ ", lastvalidationdate (25): " +e[25])
+        console.log("purchdate (10): " + e[10] + ", calduedate (17): " + e[17] + ", lastcaldate (18): " + e[18] + ", lastvalidationdate (25): " + e[25])
 
         console.log("Get Record indeksointi:\n")
         e.forEach((r) => {
@@ -67,21 +67,45 @@ const getRecord = async (eid) => {
 
 const modifyDateFormat = (pvm) => {
     let year = new Date(pvm).getFullYear();
-    let month = new Date(pvm).getMonth()+1;
+    let month = new Date(pvm).getMonth() + 1;
     let dt = new Date(pvm).getDate();
-    
+
     if (dt < 10) {
-      dt = '0' + dt;
+        dt = '0' + dt;
     }
     if (month < 10) {
-      month = '0' + month;
+        month = '0' + month;
     }
 
+    /*
     console.log("Modified date")
-    console.log(year+'-' + month + '-'+dt);
-    const resp = year+'-' + month + '-'+dt
+    console.log(year + '-' + month + '-' + dt);
+    */
+    const resp = year + '-' + month + '-' + dt
 
     return resp;
+}
+
+const checkDuplicate = async (equipmentid) => {
+    var dub = ""
+    console.log("Server -> checkDublicate, equipmentid = ", equipmentid)
+    await client.connect();
+    const res = await client.queryArray(
+        "SELECT \"equip\".equipmentid FROM \"equip\" WHERE equipmentid = ", equipmentid
+    );
+    await client.end();
+
+    console.log('Duplicate resp = ' + res.rows);
+    res.rows.forEach((e) => {
+        let i = 0;
+        if (e === equipmentid) {
+            console.log("Dublicate found");
+            dub = "Kyllä"
+        } else {
+            dub = "Ei"
+        }
+    });
+    return dub;
 }
 
 
@@ -128,28 +152,27 @@ const addEquipment = async (
     validationreport
 ) => {
 
-
     //if empty date then set default 
     if (purchasedate === "") {
         console.log("invalid purchasedate")
-        purchasedate = new Date("2000-01-01").toLocaleDateString("fi-FI");
+        purchasedate = new Date(0)
         console.log(purchasedate)
     }
     if (lastcaldate === "") {
         console.log("invalid lastcaldate")
-        lastcaldate = new Date("2000-01-01").toLocaleDateString("fi-FI");
+        lastcaldate = new Date(0)
         console.log(lastcaldate)
     }
     if (calduedate === "") {
-        
+
         console.log("invalid calduedate")
-        calduedate = new Date("2000-01-01").toLocaleDateString("fi-FI");
+        calduedate = new Date(0)
         console.log(calduedate)
-        
+
     }
     if (validationdate === "") {
         console.log("invalid validationdate")
-        validationdate = new Date("2000-01-01").toLocaleDateString("fi-FI");
+        validationdate = new Date(0)
         console.log(validationdate)
     }
 
@@ -223,10 +246,23 @@ const addEquipment = async (
         calibrationcert,
         calapplied
     );
-
     await client.end();
     console.log('Calibration taulu täytetty');
 
+    //Jos calibration due date ei ole tyhjä luo alert
+    if (calduedate != "") {
+        console.log("calduedate is not empty so creating diff");
+        let diff = checkCalDueDiff(calduedate);
+        await client.connect();
+        await client.queryArray(
+            'INSERT INTO "alert"(target, diff, equipid) VALUES( $1, $2, $3)',
+            "Calibration Due Date",
+            diff.toFixed(),
+            nextid,
+        );
+    }
+    await client.end();
+    console.log('Alert taulu täytetty');
 
     await client.connect();
     await client.queryArray(
@@ -286,7 +322,7 @@ const update = async (
     console.log('calduedate:', calduedate)
     console.log('lastcaldate:', lastcaldate)
     console.log('validationdate:', validationdate)
-    
+
     console.log('equipmentid:', eqid)
     console.log('equipmendesc:', equipmentdesc)
 
@@ -318,15 +354,40 @@ const update = async (
         eid
     );
 
-    const uResp3 = await client.queryArray(
-        "UPDATE calib SET \"calduedate\" = ($1), \"lastcaldate\" = ($2), \"calintervalyears\" = ($3),\"calibrationcert\" = ($4),\"applied\" = ($5) WHERE equipid = ($6)",
-        calduedate,
-        lastcaldate,
-        calintervalyears,
-        calibrationcert,
-        calapplied,
-        eid
+    const res = await client.queryArray(
+        "SELECT calduedate FROM \"calib\" ORDER BY calduedate DESC LIMIT 1"
     );
+
+    var c = ""
+    var earlierCalDue = ""
+    res.rows.forEach((c) => {
+        console.log("c: ", c)
+        earlierCalDue = modifyDateFormat(c);
+        console.log("calduedate value before update = ", earlierCalDue + "\nNew calduedate = ", calduedate);
+    })
+
+
+    if (earlierCalDue != calduedate) {
+        console.log("Calibration Due Date to be updated")
+        const uResp3 = await client.queryArray(
+            "UPDATE calib SET \"calduedate\" = ($1), \"lastcaldate\" = ($2), \"calintervalyears\" = ($3),\"calibrationcert\" = ($4),\"applied\" = ($5) WHERE equipid = ($6)",
+            calduedate,
+            lastcaldate,
+            calintervalyears,
+            calibrationcert,
+            calapplied,
+            eid
+        );
+
+        //Update alert table diff value
+        const diff = checkCalDueDiff(calduedate).toFixed()
+
+        const uResp31 = await client.queryArray(
+            "UPDATE alert SET \"diff\" = ($1) WHERE equipid = ($2)",
+            diff,
+            eid
+        );
+    }
 
     const uResp4 = await client.queryArray(
         "UPDATE maint SET \"maintneed\" = ($1), \"maintinstruction\" = ($2) WHERE equipid = ($3)",
@@ -348,80 +409,134 @@ const update = async (
         product,
         eid
     );
-
     await client.end();
 
-    if (uResp === 0 || uResp2 === 0 || uResp3 === 0 || uResp4 === 0 || uResp5 === 0 || uResp6 === 0) {
+    if (uResp === 0 || uResp2 === 0 || uResp4 === 0 || uResp5 === 0 || uResp6 === 0) {
         console.log("Recordin päivitys epäonnistui, tarkasta lauseke")
     }
     else {
-        console.log('Recordit päivitetty, paluuarvo: ', uResp +"\n"+ uResp2 +"\n"+ uResp3 +"\n"+ uResp4 +"\n"+ uResp5 +"\n"+ uResp6 +"\n" );
+        console.log('Recordit päivitetty, paluuarvo: ', uResp + "\n" + uResp2 + "\n" + uResp4 + "\n" + uResp5 + "\n" + uResp6 + "\n");
     }
+} //end of update
 
-}
+
+
 
 const searchData = async (lookFor) => {
     console.log('Services, datan haku keywordin perusteella');
     await client.connect();
     const res = await client.queryArray(
-        "SELECT \"equip\".eid, \"equip\".equipmentid, \"equip\".equipmentdesc, \"equip\".status, \"equip\".usedby, \"prod\".product,\"purch\".purchaseby,\"purch\".purchasedate,\"purch\".supplier, \"calib\".applied, \"maint\".maintneed,\"valid\".validationneed, \"calib\".calduedate,\"calib\".lastcaldate, \"calib\".calintervalyears FROM \"equip\" JOIN \"prod\" ON \"equip\".eid = \"prod\".equipid JOIN \"calib\" ON \"equip\".eid = \"calib\".equipid JOIN \"purch\" ON \"equip\".eid = \"purch\".equipid JOIN \"maint\" ON \"equip\".eid = \"maint\".equipid JOIN \"valid\" ON \"equip\".eid = \"calib\".equipid WHERE (equipmentdesc LIKE ($1) OR product LIKE ($1) OR usedby LIKE ($1)) ORDER BY \"equip\".eid DESC", lookFor + '%'
+        'SELECT DISTINCT \"equip\".eid, \"equip\".equipmentid, \"equip\".equipmentdesc, \"equip\".status, \"equip\".usedby, \"prod\".product,\"purch\".purchaseby,\"purch\".purchasedate,\"purch\".supplier, \"maint\".maintneed,\"valid\".validationneed, "valid".lastvalidationdate,\"calib\".calduedate,\"calib\".lastcaldate, \"calib\".applied, \"calib\".calintervalyears, \"alert\".target, \"alert\".diff FROM \"equip\" JOIN \"prod\" ON \"equip\".eid = \"prod\".equipid JOIN \"calib\" ON \"equip\".eid = \"calib\".equipid  JOIN \"purch\" ON \"equip\".eid = \"purch\".equipid JOIN \"maint\" ON \"equip\".eid = \"maint\".equipid JOIN \"valid\" ON \"equip\".eid = \"valid\".equipid JOIN \"alert\" ON \"equip\".eid = \"alert\".equipid WHERE (equipmentid LIKE ($1) OR equipmentdesc LIKE ($1) OR product LIKE ($1) OR purchaseby LIKE ($1) OR usedby LIKE ($1) OR status LIKE ($1)) ORDER BY \"equip\".eid DESC', lookFor + '%'
     );
     await client.end();
     console.log('data -> ' + res.rows);
     res.rows.forEach((e) => {
         let i = 0;
-        console.log("Purchase date", e[7]);
-        e[7] = e[7].toLocaleDateString('fi-FI');
+        e[7] = modifyDateFormat(e[7]);
+        e[12] = modifyDateFormat(e[12]);
+        console.log("Purchase day", e[7]);
         console.log(i, e);
     });
 
-    //console.log("service, getAllData -> ", res.rows);
+    console.log("service, getSearch -> ", res.rows);
     return res.rows;
 };
 
-const getAllData = async (lookFor) => {
+const getAllData = async (sortbase) => {
     let res = "";
-    console.log('Services, datan haku useasta taulusta');
+    let sortby = "";
+    var calcDueDiffDays = 0;
+
+    for (var key in sortbase) {
+        console.log("key:", key);
+        console.log("value: ", sortbase[key]);
+        sortby = sortbase[key];
+    }
+
     await client.connect();
-    res = await client.queryArray(
-        'SELECT DISTINCT \"equip\".eid, \"equip\".equipmentid, \"equip\".equipmentdesc, \"equip\".status, \"equip\".usedby,\"prod\".product,\"purch\".purchaseby,\"purch\".purchasedate,\"purch\".supplier,\"maint\".maintneed,\"valid\".validationneed, "valid".lastvalidationdate,\"calib\".calduedate,\"calib\".lastcaldate, \"calib\".applied, \"calib\".calintervalyears FROM \"equip\" JOIN \"prod\" ON \"equip\".eid = \"prod\".equipid JOIN \"calib\" ON \"equip\".eid = \"calib\".equipid JOIN \"purch\" ON \"equip\".eid = \"purch\".equipid JOIN \"maint\" ON \"equip\".eid = \"maint\".equipid JOIN \"valid\" ON \"equip\".eid = \"valid\".equipid ORDER BY \"equip\".eid DESC'
-    );
+    //Sorting based on product
+    if (sortby === "product") {
+        console.log('product sorting')
+        res = await client.queryArray(
+            'SELECT DISTINCT \"equip\".eid, \"equip\".equipmentid, \"equip\".equipmentdesc, \"equip\".status, \"equip\".usedby,\"prod\".product,\"purch\".purchaseby,\"purch\".purchasedate,\"purch\".supplier,\"maint\".maintneed,\"valid\".validationneed, "valid".lastvalidationdate,\"calib\".calduedate,\"calib\".lastcaldate, \"calib\".applied, \"calib\".calintervalyears, \"alert\".target, \"alert\".diff FROM \"equip\" JOIN \"prod\" ON \"equip\".eid = \"prod\".equipid JOIN \"calib\" ON \"equip\".eid = \"calib\".equipid JOIN \"purch\" ON \"equip\".eid = \"purch\".equipid JOIN \"maint\" ON \"equip\".eid = \"maint\".equipid JOIN \"valid\" ON \"equip\".eid = \"valid\".equipid JOIN \"alert\" ON \"equip\".eid = \"alert\".equipid ORDER BY \"prod\".product DESC'
+        );
+    } else if (sortby === 'status') {
+        console.log('status sorting')
+        res = await client.queryArray(
+            'SELECT DISTINCT \"equip\".eid, \"equip\".equipmentid, \"equip\".equipmentdesc, \"equip\".status, \"equip\".usedby,\"prod\".product,\"purch\".purchaseby,\"purch\".purchasedate,\"purch\".supplier,\"maint\".maintneed,\"valid\".validationneed, "valid".lastvalidationdate,\"calib\".calduedate,\"calib\".lastcaldate, \"calib\".applied, \"calib\".calintervalyears, \"alert\".target, \"alert\".diff FROM \"equip\" JOIN \"prod\" ON \"equip\".eid = \"prod\".equipid JOIN \"calib\" ON \"equip\".eid = \"calib\".equipid JOIN \"purch\" ON \"equip\".eid = \"purch\".equipid JOIN \"maint\" ON \"equip\".eid = \"maint\".equipid JOIN \"valid\" ON \"equip\".eid = \"valid\".equipid JOIN \"alert\" ON \"equip\".eid = \"alert\".equipid ORDER BY \"equip\".status ASC'
+        );
+
+    } else if (sortby === 'ostaja') {
+        res = await client.queryArray(
+            'SELECT DISTINCT \"equip\".eid, \"equip\".equipmentid, \"equip\".equipmentdesc, \"equip\".status, \"equip\".usedby,\"prod\".product,\"purch\".purchaseby,\"purch\".purchasedate,\"purch\".supplier,\"maint\".maintneed,\"valid\".validationneed, "valid".lastvalidationdate,\"calib\".calduedate,\"calib\".lastcaldate, \"calib\".applied, \"calib\".calintervalyears, \"alert\".target, \"alert\".diff FROM \"equip\" JOIN \"prod\" ON \"equip\".eid = \"prod\".equipid JOIN \"calib\" ON \"equip\".eid = \"calib\".equipid JOIN \"purch\" ON \"equip\".eid = \"purch\".equipid JOIN \"maint\" ON \"equip\".eid = \"maint\".equipid JOIN \"valid\" ON \"equip\".eid = \"valid\".equipid JOIN \"alert\" ON \"equip\".eid = \"alert\".equipid ORDER BY \"purch\".purchaseby ASC'
+        );
+
+    } else if (sortby === 'ostopvm') {
+        res = await client.queryArray(
+            'SELECT DISTINCT \"equip\".eid, \"equip\".equipmentid, \"equip\".equipmentdesc, \"equip\".status, \"equip\".usedby,\"prod\".product,\"purch\".purchaseby,\"purch\".purchasedate,\"purch\".supplier,\"maint\".maintneed,\"valid\".validationneed, "valid".lastvalidationdate,\"calib\".calduedate,\"calib\".lastcaldate, \"calib\".applied, \"calib\".calintervalyears, \"alert\".target, \"alert\".diff FROM \"equip\" JOIN \"prod\" ON \"equip\".eid = \"prod\".equipid JOIN \"calib\" ON \"equip\".eid = \"calib\".equipid JOIN \"purch\" ON \"equip\".eid = \"purch\".equipid JOIN \"maint\" ON \"equip\".eid = \"maint\".equipid JOIN \"valid\" ON \"equip\".eid = \"valid\".equipid JOIN \"alert\" ON \"equip\".eid = \"alert\".equipid ORDER BY \"purch\".purchasedate DESC'
+        );
+
+    } else if (sortby === 'toimittaja') {
+        res = await client.queryArray(
+            'SELECT DISTINCT \"equip\".eid, \"equip\".equipmentid, \"equip\".equipmentdesc, \"equip\".status, \"equip\".usedby,\"prod\".product,\"purch\".purchaseby,\"purch\".purchasedate,\"purch\".supplier,\"maint\".maintneed,\"valid\".validationneed, "valid".lastvalidationdate,\"calib\".calduedate,\"calib\".lastcaldate, \"calib\".applied, \"calib\".calintervalyears, \"alert\".target, \"alert\".diff FROM \"equip\" JOIN \"prod\" ON \"equip\".eid = \"prod\".equipid JOIN \"calib\" ON \"equip\".eid = \"calib\".equipid JOIN \"purch\" ON \"equip\".eid = \"purch\".equipid JOIN \"maint\" ON \"equip\".eid = \"maint\".equipid JOIN \"valid\" ON \"equip\".eid = \"valid\".equipid JOIN \"alert\" ON \"equip\".eid = \"alert\".equipid ORDER BY \"purch\".manufacture ASC'
+        );
+    } else if (sortby === 'osasto') {
+        res = await client.queryArray(
+            'SELECT DISTINCT \"equip\".eid, \"equip\".equipmentid, \"equip\".equipmentdesc, \"equip\".status, \"equip\".usedby,\"prod\".product,\"purch\".purchaseby,\"purch\".purchasedate,\"purch\".supplier,\"maint\".maintneed,\"valid\".validationneed, "valid".lastvalidationdate,\"calib\".calduedate,\"calib\".lastcaldate, \"calib\".applied, \"calib\".calintervalyears, \"alert\".target, \"alert\".diff FROM \"equip\" JOIN \"prod\" ON \"equip\".eid = \"prod\".equipid JOIN \"calib\" ON \"equip\".eid = \"calib\".equipid JOIN \"purch\" ON \"equip\".eid = \"purch\".equipid JOIN \"maint\" ON \"equip\".eid = \"maint\".equipid JOIN \"valid\" ON \"equip\".eid = \"valid\".equipid JOIN \"alert\" ON \"equip\".eid = \"alert\".equipid ORDER BY \"equip\".usedby ASC'
+        );
+        }    
+    else {
+        res = await client.queryArray(
+            'SELECT DISTINCT \"equip\".eid, \"equip\".equipmentid, \"equip\".equipmentdesc, \"equip\".status, \"equip\".usedby,\"prod\".product,\"purch\".purchaseby,\"purch\".purchasedate,\"purch\".supplier,\"maint\".maintneed,\"valid\".validationneed, "valid".lastvalidationdate,\"calib\".calduedate,\"calib\".lastcaldate, \"calib\".applied, \"calib\".calintervalyears, \"alert\".target, \"alert\".diff FROM \"equip\" JOIN \"prod\" ON \"equip\".eid = \"prod\".equipid JOIN \"calib\" ON \"equip\".eid = \"calib\".equipid JOIN \"purch\" ON \"equip\".eid = \"purch\".equipid JOIN \"maint\" ON \"equip\".eid = \"maint\".equipid JOIN \"valid\" ON \"equip\".eid = \"valid\".equipid JOIN \"alert\" ON \"equip\".eid = \"alert\".equipid ORDER BY \"equip\".eid DESC'
+        );
+    }
     await client.end();
     //console.log('data -> ' + res.rows);
 
     console.log("getAllData values:\n")
     var i = 0;
-    
-    res.rows.forEach((e) => {        
-        e.forEach((r)=>{            
-            console.log(i, r)            
+
+    res.rows.forEach((e) => {
+        e.forEach((r) => {
+            //console.log(i, r)
             i++
         });
-    
-        
+
         e[7] = modifyDateFormat(e[7])
         e[11] = modifyDateFormat(e[11])
         e[12] = modifyDateFormat(e[12])
         e[13] = modifyDateFormat(e[13])
-
         console.log("Services, getAllData returns:\n")
-        console.log("purchdate (7): " +e[7]+ ", lastvalidationdate (11): " +e[11]+ ", calduedate (12): " +e[12]+ ", lastcaldate (13): " +e[13])
-        
+        console.log("purchdate (7): " + e[7] + ", lastvalidationdate (11): " + e[11] + ", calduedate (12): " + e[12] + ", lastcaldate (13): " + e[13])
         console.log('\n')
-
-        //Alarm
-        var today = new Date();
-        console.log("today: ", today)
-        //Diff between today and calduedate
-        console.log("calduedate:", e[12])
-        const diffTime = Math.abs(today - e[12]);
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        console.log(diffDays + " days");
+        calcDueDiffDays = checkCalDueDiff(e[12]);
+        console.log("Today - calibration diff " + calcDueDiffDays.toFixed() + " days");
+        res.rows.forEach((p) => {
+            p[16] = calcDueDiffDays.toFixed();
+        })
     });
+
 
     //console.log("service, getAllData -> ", res.rows);
     return res.rows;
 };
+
+const checkCalDueDiff = (diffDate) => {
+    //Alarm
+    var today = new Date()
+    var modToday = modifyDateFormat(new Date())
+    console.log("today: ", modToday)
+    //Diff between today and calduedate
+    var cDate = new Date(diffDate)
+    console.log("calduedate:", diffDate)
+
+    var difference_In_Time = today.getTime() - cDate.getTime();
+
+    // To calculate the no. of days between two dates
+    let diffDays = difference_In_Time / (1000 * 3600 * 24);
+
+    return diffDays;
+}
 
 const deleteRecord = async (eid) => {
     console.log('Laitteen poisto');
@@ -469,5 +584,7 @@ export {
     update,
     deleteRecord,
     searchData,
-    modifyDateFormat
+    modifyDateFormat,
+    checkCalDueDiff,
+    checkDuplicate,
 };

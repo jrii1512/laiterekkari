@@ -1,0 +1,4 @@
+eid;oldid;status;prefix;category;categorydesc;number;equipmentid;equipmentdesc;specification;notes;usedby
+82;-;ei aktiivinen;TEST;666;Kategorian kuvaus;91;TEST-666-91;Testi kuva;-;Ei;Tuotekehitys
+80;-;;TEST;666;Kategorian kuvaus;99;TEST-666-99;Testi kuva;;Ei;Tuotekehitys
+83;-;ei aktiivinen;TEST;7;Kategorian kuvaus;1;TEST-7-1;Testi kuva;-;Ei;Tuotekehitys
