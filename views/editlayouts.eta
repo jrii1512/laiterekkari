@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--<script src="https://deno.land/x/refresh/client.js"></script>-->  
+  <!--<script src="https://deno.land/x/refresh/client.js"></script>-->
+  
 <meta charset="utf-8">
 <link rel="icon" href="data:;base64,=">
 <title>Vivago Device Register</title>
@@ -66,13 +67,36 @@ div#kyselyt{
   width:40%;
 }
 
-
-#calappl{
-width:40%;
+#calDate{
+  width:100%; !important
 }
 
-#calInt{
-width:20%;
+.farest{
+  width:fit-content;
+}
+
+select#selNorm{
+  vertical-align:middle;
+  padding: 16px;
+  width:30%;
+  height:50px;
+}
+.validationneed{
+  vertical-align:middle;
+  padding: 12px;
+  width: 40%;
+  height:40%;
+}
+
+select#selMan{
+  padding: 12px;
+  width: 30% !important;
+  height: 100px;
+}
+
+select#selKalib{
+  padding: 12px;
+  width: 60% !important;
 }
 
 #stillTime{
@@ -135,7 +159,6 @@ th, td{
 }
 
 input{
-vertical-align:top;
   margin-top:3px;
   width:45%;
   height:24px;
@@ -144,8 +167,14 @@ vertical-align:top;
   color: black;
   }
 
-label, input{
-  vertical-align:top;
+.calInput{
+  margin-top:3px;
+  width:50px;
+  font-size:16px;
+  padding-left:3px;
+  padding-top:3px;
+  padding-bottom:3px;
+  color: black;
 }
 
 .calCert{
@@ -181,7 +210,6 @@ input#back{
     height: fit-content;
 }
 
-
 #yhteenveto{
     border: solid, 1px;
     border-color:black;
@@ -199,7 +227,7 @@ input#back{
 }
 
 label{
-    display:inline-block;    
+    display:inline-block;
     width:20%;
     height:18px;
     font-size:18px;
@@ -227,6 +255,132 @@ textarea{
   display:inline-block;
   vertical-align:middle;
   padding:12px;
+}
+
+@media only screen and (max-device-width: 1100px) and (max-device-height: 1600px) and (-webkit-min-device-pixel-ratio: 2.625)  {
+
+.box{
+    margin-top:20%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:gray;
+    border: 5px solid;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px 10px;
+    width: 100%;
+    align:center;
+    }
+
+div#kyselyt{
+   border: solid, 1px;
+    border-color:black;
+    background-color:#ccffb3;;
+    color: black;
+    padding: 3px;
+    text-align: center;
+    display: inline-block;
+    font-size:24px;
+    font-weight: bold;
+}
+
+
+.formi{
+  margin-left:1px;
+  margin-right:1px;
+  margin-top: 100px;
+  margin-bottom:100px;
+  width:95%;
+  height: 100%;
+  padding:5px;
+  border: 1px solid red;
+  border-color: red;
+  border-radius: 10px;
+}
+
+table, td {
+  border: 1px solid black;
+  border-color:white;
+  text-align:left;
+  background-color: black;
+  color: white;
+  height:98%;
+  font-size:22px;
+  font-weight:bold;
+
+}
+th, td{
+    padding: 5px 5px 5px 5px
+}
+
+input{
+  margin-top:3px;
+  width:30%;
+  height:60px;
+  font-size:30px;
+  font-weight: bold;
+  padding-left:10px;
+  padding-top:3px;
+  padding-bottom:3px;
+  color: black;
+  }
+
+#back{
+  width:20%;
+  font-weight:bold;
+  font-size:30px;
+  text-align: center;
+}
+
+#hetki{
+  width:20%;
+}
+
+#laheta{
+    margin-top:20px;
+    border: solid, 1px;
+    border-color:black;
+    background-color: white;
+    color: black;
+    padding: 3px;
+    text-align: center;
+    display: inline-block;
+    font-size:36px;
+    font-weight: bold;
+}
+
+#yhteenveto{
+    border: solid, 1px;
+    border-color:black;
+    background-color: white;
+    color: black;
+    padding: 3px;
+    text-align: center;
+    display: inline-block;
+    font-size:36px;
+    font-weight: bold;
+}
+
+label{
+    width:200px;
+    height:40px;
+    font-size:30px;
+    font-weight:bold;
+    margin-right:20px;
+    color: white;
+    }
+
+div#data{
+    margin-left:1px;
+    margin-right:1px;
+    margin-top: 100px;
+    margin-bottom:100px;
+    width:100%;
+    height: 100%;
+  }
+
+div#kuvat{
+  background-color: white;
 }
 </style>
 

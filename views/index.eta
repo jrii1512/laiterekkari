@@ -4,22 +4,17 @@
 <div id = "main">    
     <h3><% it.mainpage %></h3>
 
-
-
-
     <table>
         <th>Viimeisimmät Bugit</th><th>Korjatut</th>
         <tr>
             <td>
                 <ol>                    
-                    
-                    <li>Laitelista näkymä:</li>                    
-                    <li>KL: Otsikkoihin perustuva filteröinti olisi hyvä.</li>                                 
                 </ol>
             </td>
 
             <td>
-                <ol>                    
+                <ol>           
+                    <li>KL: Otsikkoihin perustuva filteröinti olisi hyvä.</li>              
                     <li>KL: Mikäli kalibrointia mennessä ei ole asetettu niin ”alert” dataa ei tarvita.</li>
                     <li>KL: Selkeämpi otsikointi osille kenttää etenkin ”alert” kolumnille.</li> 
                     <li>KL: ”Taulukon väritys + alert indikaattorien väritys.</li>
@@ -45,8 +40,7 @@
         </tr>
         <tr>            
         <td>
-            <ol>
-                <li>Alert toiminnallisuuden laajentaminen validation due dateen</li>
+            <ol>                
                 <li>Populointi oikealla datalla</li>
                 <li>Unit testit</li>
             </ol>

@@ -1,6 +1,7 @@
-<% layout("./layouts.eta") %>
+<% layout("./createLayouts.eta") %>
 
 <head>
+
   <style>
     * {
       box-sizing: border-box;
@@ -11,6 +12,8 @@
       margin-top: 20px;
       float: left;
       padding: 10px;      
+      border-left: 5px solid black;
+      height: 700px;
     }
 
         .left {
@@ -26,7 +29,7 @@
     }
 
     .farest {
-    width: 25%;
+    width: 25%;        
     }
 
     /* Clear floats after the columns */
@@ -38,19 +41,8 @@
   </style>
 
 <script>
-    let updater = document.getElementById("purchdate");
-    updater.addEventListener("mouseover", function( event ) {
-    const t = today;
-    event.target.value = t;
-  })
-</script>
-
-</head>
-
-
-
-<script>
-  const populate = () => {
+const populate = () => {
+    console.log("populate function called")
     document.getElementById("pre").value = "TEST";
     document.getElementById("cat").value = "666";
     document.getElementById("catdesc").value = "Kategorian kuvaus";
@@ -66,30 +58,31 @@
 
     var day = ("0" + Eiw.getDate()).slice(-2);
     var month = ("0" + (Eiw.getMonth() + 1)).slice(-2);
-    var today = Eiw.getFullYear()+"-"+(month)+"-"+(day) ;    
+    var today = Eiw.getFullYear() + "-" + (month) + "-" + (day);
     document.getElementById("purchdate").value = today;
-  }
-</script>
+}
 
-<script>
 const today = () => {
     console.log("today- funktio")
     var Eiw = new Date();
     var day = ("0" + Eiw.getDate()).slice(-2);
     var month = ("0" + (Eiw.getMonth() + 1)).slice(-2);
-    var today = Eiw.getFullYear()+"-"+(month)+"-"+(day) ;
+    var today = Eiw.getFullYear() + "-" + (month) + "-" + (day);
     document.getElementById("purchdate").value = today;
     return today;
-    }
-</script>
+}
 
+
+</script>
+</head>
+
+<button onclick = "populate()"></button>
 
 <span><%it%></span>
 
-<button id="testisisaltoa" onclick="populate()"></button>
-
 <div class = "row">
   <div class = "column left">
+    <h3 id = "otsikko">Perus</h3>
     <form action = "/register" method = "post" name ="startForm">      
         <!-- id generated from prefix, category and from number 
         Equipment table
@@ -134,7 +127,7 @@ const today = () => {
           <input type = "text" name = "specification" value = "-" tabindex = "9">
         <p>
 
-        <label for="Eites"><b>MuistiinpaEit</b></label>
+        <label for="Eites"><b>Muistio</b></label>
           <textarea rows = "6" cols = "30" name = "Eites" tabindex = "10">Ei</textarea>
         <p>
 </div>
@@ -142,6 +135,7 @@ const today = () => {
 
 <!-- Purchase taulu-->
   <div class = "column middle">
+  <h3 id = "otsikko">Ostos</h3>
 
         <label for="purchaseby"><b>Ostaja</b></label>
           <input type = "text" name = "purchaseby" id = "purchaseby" tabindex = "11" placeholder = "pakollinen" required>
@@ -212,6 +206,7 @@ const today = () => {
 
 <!-- Product, maintenance and validation tables-->
   <div class = "column right">
+  <h3 id = "otsikko">Tuote</h3>
         <label for="product"><b>Tuote</b></label>
            <select name = "product" name = "product" id = "selNorm" multiple="multiple" tabindex = "20">
             <option value = "Ei" selected="selected">Ei tuotetta</option>
@@ -235,8 +230,8 @@ const today = () => {
           </select>  
         <p>
 
-        <label for="maintenancEinstruction"><b>Ylläpito-ohje</b></label>
-          <textarea rows = "6" cols = "30" name = "maintenancEinstruction" tabindex = "22">Ei</textarea>
+        <label for="maintenanceinstruction"><b>Ylläpito-ohje</b></label>
+          <textarea rows = "6" cols = "30" name = "maintenanceinstruction" tabindex = "22">Ei</textarea>
         <p>
 
         <label for="validationneed"><b>Validointi tarve</b></label>
@@ -247,7 +242,7 @@ const today = () => {
         <p>
 
         <label for="validationdate"><b>Validointi päivä</b></label>
-          <input type = "date" name = "validationdate" tabindex = "24">
+          <input type = "date" name = "validationdate" id = "valDate" tabindex = "24">
         <p>
 
         <label for="validationreport"><b>Validaatio raportti</b></label>
@@ -257,34 +252,32 @@ const today = () => {
 
   <!-- Calibration table-->
   <div class = "column farest">
+  <h3 id = "otsikko">Kalibrointi</h3>
 
-        <label for="calapplied"><b>Kalibroitu</b>
-          <select name = "calapplied" id = "selKalib" tabindex = "26">
+        <label for="calapplied"><b>Kalibroitu</b></label>
+          <select name = "calapplied" id="calappl" tabindex = "26">
             <option value = "Ei" selected="selected">Ei</option>
             <option value = "Kyllä">Kyllä</option>
-            
           </select>  
+          
         <p>
         
-        <label for="calintervalyears"><b>Kalibrointi väli</b></label>
-          <input type = "number" name = "calintervalyears" class = "calInput" value = 0 tabindex = "27">
+        <label for="calintervalyears"><b>Intervalli</b></label>
+          <input type = "number" name = "calintervalyears" id = "calInt" value = 0 tabindex = "27">
         <p>
 
-        <label for="calduedate"><b>Kalibrointi mennessä</b></label>
-          <input type = "date" name = "calduedate" class = "calDate" tabindex = "28">
+        <label for="calduedate"><b>Mennessä</b></label>
+          <input type = "date" name = "calduedate" id="date" tabindex = "28">
         <p>
 
-        <label for="lastcaldate"><b>Kalibroitu (date)</b></label>
-          <input type = "date" name = "lastcaldate" class = "calDate" tabindex = "29">
+        <label for="lastcaldate"><b>Kalibroitu</b></label>
+          <input type = "date" name = "lastcaldate" id= "date" tabindex = "29">
         <p>
 
-
-        <label for="calibrationcert"><b>Kalibroinnin sertifikaatti</b></label>
-          <input type = "calibrationcert" name = "calibrationcert" class = "calCert" tabindex = "30" value = "Ei sertifikaattia">
+        <label for="calibrationcert"><b>Sertifikaatti</b></label>
+          <input type = "calibrationcert" name = "calibrationcert" tabindex = "30" value = "Ei sertifikaattia">
         <p>
   </div>
-
-
 </div>
 
   <input type = "submit" value = "Tallenna" id="laheta">

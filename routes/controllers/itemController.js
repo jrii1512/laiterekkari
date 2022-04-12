@@ -6,6 +6,8 @@ import { readLines } from 'https://deno.land/std/io/mod.ts';
 import * as path from 'https://deno.land/std/path/mod.ts';
 import { readline } from 'https://deno.land/x/readline@v1.1.0/mod.ts';
 import * as base64 from 'https://deno.land/x/base64@v0.2.1/mod.ts';
+import * as createFuncs from '../../static/js/createFunctions.js'
+import * as editFuncs from '../../static/js/editFunctions.js';
 
 import {
     decode as base64Decode,
@@ -18,6 +20,10 @@ var log = [];
 var imageFilePath = '';
 debugger;
 
+
+export const populate = async() => {
+    await createFuncs.populate();
+}
 
 const showMain = async ({ response }) => {
     try{

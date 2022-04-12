@@ -1,4 +1,4 @@
-<% layout("./layouts.eta") %>
+<% layout("./editLayouts.eta") %>
 <head>
 
   <style>
@@ -37,33 +37,8 @@
     }
   </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="../js/editFunctions.js"></script>
 </head>
-
-<script>
-  const modDate = (pvm) => {
-  console.log("pvm = ", pvm)
-      var day = ("0" + pvm.getDate()).slice(-2);
-      var month = ("0" + (pvm.getMonth() + 1)).slice(-2);
-      var today = pvm.getFullYear()+"-"+(month)+"-"+(day) ;
-      document.getElementById("calduedate").value = today;
-  }
- 
-  const check = ((h) => {
-  console.log("check- funktio")
-  if (h[17] == "2000-01-01"){
-    h[17] = "";
-  } 
-  if (h[18] === "2000-01-01"){
-    h[18] = "";
-  }
-  if (h[25] === "2000-01-01"){
-    h[25] = "";
-  }
-  })
-</script>
-
-
-
 
 <% it.data.forEach((h) =>{%>
 
@@ -100,14 +75,15 @@
         </select>
         <p>
 
-        <label for="specification"><b>Specsin sijainti</b></label>
+        <label for="specification"><b>Dokumentti</b></label>
         <% if (!h[5]) {%>
-          <%= h[5] = "-"%>
-        <%}%>  
-        <input type = "text" value = "<%= h[5] %>">
+          <input type = "text" value = "-">
+        <%} else {%>  
+          <input type = "text" value = "<%= h[5] %>">
+        <%}%>
         <p>
 
-        <label for="notes"><b>Muistiinpanot</b></label>
+        <label for="notes"><b>Muistio</b></label>
         <% if (!h[6]) {%>
           <textarea rows = "6" cols = "30" name =  "notes"><%= h[6] %></textarea>
         <%} else {%>  
@@ -212,8 +188,8 @@
             <option value = "Kyllä">Kyllä</option>                  
           </select>  
         <p>
-    
-        
+            
+           
         <label for="calduedate"><b>Kalibrointi,<br>mennessä</b></label>   
           <input type = "date" name = "calduedate" id = "caldue" value="<%=h[17]%>"/>
         <p>

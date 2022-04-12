@@ -19,4 +19,6 @@ router.get('/guide', item.showGuide);
 router.post('/update', item.updaterec);
 router.post('/register', item.register);
 
+router.get('/populate', item.populate);
+
 export default router.routes();
